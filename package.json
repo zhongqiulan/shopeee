@@ -1,0 +1,49 @@
+{
+  "name": "szhmqd16",
+  "version": "1.0.0",
+  "description": "这是16期的项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --progress --config webpack.config.dev.js --port 6008 --open --hot",
+    "build": "webpack --progress --config webpack.config.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.4.1",
+    "iview": "^2.13.0",
+    "jquery": "^3.3.1",
+    "jquery.nicescroll": "^3.7.6",
+    "moment": "^2.22.1",
+    "v-distpicker": "^1.0.16",
+    "vue": "^2.5.16",
+    "vue-lazyload": "^1.2.3",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.2",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-component": "^1.1.0",
+    "babel-plugin-import": "^1.7.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^6.0.3",
+    "scss-loader": "^0.0.1",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2"
+  }
+}

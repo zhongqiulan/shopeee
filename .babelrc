@@ -1,0 +1,15 @@
+{
+    "presets": [
+        "env"
+    ],
+    "plugins": [
+        [
+            "import",
+            {
+                "libraryName": "iview",
+                "libraryDirectory": "src/components"
+            }
+        ],
+        ["syntax-dynamic-import"]
+    ]
+}

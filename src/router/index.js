@@ -39,6 +39,7 @@ const APP = () => import("../test/APP")
 const father = () => import("../test/father")
 const appbus = () => import("../test/appbus")
 const game = () => import("../test/game")
+const table4= () => import("../test/table4")
 
 const router = new VueRouter({
     routes: [
@@ -57,6 +58,7 @@ const router = new VueRouter({
         
         },
         { path:'/iframe',component:iframe},
+        { path:'/table4',component:table4},
         { path:'/app',component:APP},
         { path:'/father',component:father},
         { path:'/appbus',component:appbus},

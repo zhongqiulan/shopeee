@@ -5,12 +5,11 @@
         <th>姓名</th><th>{{getTotalCount}}</th><th>成绩</th>
       </thead>
       <tbody>
-        <tr><td>bbbbGGGGGGGG44</td><td><input value={{item1}}/></td><td><i class="el-icon-remove-outline"></i></td></tr>
-        <tr><td>bbbbGGGGGGGG44</td><td><input value={{item2}}/></td><td><i class="el-icon-remove-outline"></i></td></tr>
-        <tr><td>bbbbGGGGGGGG44</td><td><input value="30"/></td><td><i class="el-icon-remove-outline"></i></td></tr>
-        <tr><td>bbbbGGGGGGGG44</td><td><input value="30"/></td><td><i class="el-icon-circle-check-outline"></i></td></tr>
-        <tr><td>bbbbGGGGGGGG44</td><td><input value="30"/></td><td><i class="el-icon-remove-outline"></i></td></tr>
-        <tr><td>bbbbGGGGGGGG44</td><td><input value="30"/></td><td><i class="el-icon-remove-outline"></i></td></tr>
+        <tr><td>bbbbGGGGGGGG44</td><td><input v-model="item1"/></td><td><i class="el-icon-remove-outline"></i></td></tr>
+        <tr><td>bbbbGGGGGGGG44</td><td><input v-model="item2"/></td><td><i class="el-icon-remove-outline"></i></td></tr>
+        <tr><td>bbbbGGGGGGGG44</td><td><input v-model="item3"/></td><td><i class="el-icon-remove-outline"></i></td></tr>
+        <tr><td>bbbbGGGGGGGG44</td><td><input v-model="item4"/></td><td><i class="el-icon-remove-outline"></i></td></tr>
+
         
       </tbody>
     </table>
@@ -24,14 +23,16 @@ export default {
   data () {
     return {
     item1:1,
-    item2:2
+    item2:2,
+    item3:4,
+    item4:5
     }
   },
   computed:{
        getTotalCount() {
-                // let totalCount = 0
-                // totalCount = this.item1+ this.item2
-                // return totalCount
+                let totalCount = 0
+                totalCount = this.item1+this.item2+this.item3+this.item4
+                return totalCount
             },
   },
   methods: {

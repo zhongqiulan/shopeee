@@ -38,6 +38,7 @@ const iframe = () => import("../test/iframe")
 const APP = () => import("../test/APP")
 const father = () => import("../test/father")
 const appbus = () => import("../test/appbus")
+const game = () => import("../test/game")
 
 const router = new VueRouter({
     routes: [
@@ -47,7 +48,14 @@ const router = new VueRouter({
         { path: '/goodsinfo/:goodsId', component: goodsinfo },
         { path:'/login',component:login},
         { path:'/table',component:table},
-        { path:'/table2',component:table2},
+        { 
+            path:'/table2',component:table2,
+        
+        },
+        { 
+            path:'/cicdMain',component:game,
+        
+        },
         { path:'/iframe',component:iframe},
         { path:'/app',component:APP},
         { path:'/father',component:father},

@@ -1,5 +1,7 @@
 <template>
   <div id="table2">
+    <!-- <router-link to="{ path:'/home/game', query: { num:  1} }" >默认按钮</router-link> -->
+    <el-button @click="toGame">默认按钮</el-button>
     <el-button round  @click="showModal = true">圆角按钮</el-button> 
     <iframe-model v-if="showModal" @close="showModal = false">
     </iframe-model>
@@ -22,7 +24,12 @@ export default {
     }
   },
   methods: {
- 
+ toGame() {
+    this.$router.push({
+          path: '/cicdMain',
+          query: { id: 1, stage: 2 }
+        })
+ }
 
   }
 }

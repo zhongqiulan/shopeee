@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <title></title>
+</head>
+<body>
+<div id="example">
+    <parent></parent>
+</div>
+<script type="text/x-template" id="parentTpl">
+    <div>
+        <h1>这是父组件</h1>
+        <button @click="checkSonStatues">获取子组件的数据</button>
+        <hr/>
+        <son ref="mySon"></son>
+    </div>
+</script>
+<script type="text/x-template" id="sonTpl">
+    <div>
+        <h2>这是子组件</h2>
+        <button @click="checkParentStatues">获取父组件的数据</button>
+    </div>
+</script>
+<script>
+    Vue.component('parent',{
+        template:'#parentTpl',
+        data:function(){
+            return{
+                nowWork:'正在上班...'
+            }
+        },
+        methods:{
+            checkSonStatues:function(){
+                console.log(this.$refs.mySon.nowDong)
+            }
+        }
+    })
+    Vue.component('son',{
+        data:function(){
+            return{
+                nowDong:'正在学习...'
+            }
+        },
+        methods:{
+          checkParentStatues:function(){
+              console.log(this.$parent.nowWork)
+          }
+        },
+        template:'#sonTpl'
+    })
+</script>
+<script>
+    new Vue({
+        el: '#example',
+        data: {
+            msg: 'hello'
+        }
+    })
+</script>
+</body>
+</html>

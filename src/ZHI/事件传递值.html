@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <title></title>
+</head>
+<body>
+<div id="example">
+   <parent></parent>
+</div>
+<script type="text/x-template" id="parentTpl">
+  <div>
+      <h1>父组件</h1>
+      <son @toParent="recMsg"></son>
+  </div>
+</script>
+<script type="text/x-template" id="sonTpl">
+  <div>
+      <h2>子组件</h2>
+      <input type="text" v-model="myMsg"/>
+      <button @click="sendToFather">发给父组件</button>
+  </div>
+</script>
+<script>
+    Vue.component('parent',{
+        template:'#parentTpl',
+        methods:{
+            recMsg:function(msg){
+                console.log('事件被触发msg is'+msg);
+            }
+        }
+    })
+    Vue.component('son',{
+        template:'#sonTpl',
+        data:function(){
+            return {
+                myMsg:''
+            }
+        },
+        methods:{
+            sendToFather:function(){
+                console.log("当前用户输入的内容为 "+this.myMsg);
+                this.$emit('toParent',this.myMsg)
+            }
+        }
+    })
+    new Vue({
+        el: '#example',
+        data: {
+            msg: 'hello'
+        }
+    })
+</script>
+</body>
+</html>

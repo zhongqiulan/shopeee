@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <title></title>
+    <!-- 试试属性传值的方法 -->
+</head>
+<body>
+<div id="example">
+    <p>{{msg}}</p>
+    <parent></parent>
+</div>
+<script type="text/x-template" id="parentTpl">
+ <div>
+     <h1>这是父组件</h1>
+     <son name="zhangsan"></son>
+ </div>
+</script>
+<script type="text/x-template" id="sonTpl">
+ <div>
+     <h2>这是子组件</h2>
+     <p>{{"接收到的数据为"+name}}</p>
+ </div>
+</script>
+<script>
+    Vue.component('parent',{
+        template:'#parentTpl'
+    })
+    Vue.component('son',{
+        props:['name'],
+        template:'#sonTpl'
+    })
+    new Vue({
+        el: '#example',
+        data: {
+            msg: 'hello'
+        }
+    })
+</script>
+</body>
+</html>

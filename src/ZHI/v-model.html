@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+</head>
+<body>
+    <!-- View -->
+    <div id="app">
+        <input v-model="v1" type="text">+
+        <input v-model="v2" type="text">
+       
+        <span>{{getTotalCount}}</span>
+   </div>
+</body>
+<script>
+    const vm = new Vue({
+        el:"#app",
+        data:{
+            v1:0,
+            v2:0
+        
+        },
+        computed:{
+            getTotalCount() {
+                let totalCount = 0
+                totalCount =  parseInt(this.v1)+ parseInt(this.v2)
+                return totalCount
+            }  
+            }
+        }
+    )
+</script>
+</html>

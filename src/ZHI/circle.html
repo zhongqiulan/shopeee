@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <title>Document</title>
+    <style>
+        .container div{position:absolute;top:50%;left:50%;border-radius:100%;}
+        .container .B{width:250px;height:250px;border:solid 1px red;margin-left:-125px;margin-top:-125px;background-color:#fff;}
+        .container .C{width:100px;height:100px;border:solid 1px #60ff00 ;margin-left:-50px;margin-top:-50px;background-color:#60ff00 ;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="container" @click="toggle">
+            <div class="B" ></div>
+            <div :class="{ C: isActive }"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    new Vue({
+      el: '#app',
+      data: {
+        isActive: true
+      },
+      methods:{
+          toggle(){
+              this.isActive = false
+          }
+      }
+    })
+    </script>

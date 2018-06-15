@@ -40,6 +40,7 @@ const father = () => import("../test/father")
 const appbus = () => import("../test/appbus")
 const game = () => import("../test/game")
 const table4= () => import("../test/table4")
+const upload= () => import("../test/upload")
 
 const router = new VueRouter({
     routes: [
@@ -62,6 +63,7 @@ const router = new VueRouter({
         { path:'/app',component:APP},
         { path:'/father',component:father},
         { path:'/appbus',component:appbus},
+        { path:'/upload',component:upload},
         //==================华丽的分隔线，下面都是需要先判断是否登录的
         //meta 代表的是给某个路由规则额外设置些数据
         { path: '/order/:ids', component: order,meta: { requiresAuth: true } },

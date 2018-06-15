@@ -136,15 +136,11 @@
         },
         created() {
             this.getGoodsListData()
-            console.log('111111')
-            console.log( this.$store.state.buyCount)
-            console.log( this.$store.getters.getBuyCount)
 
         },
         computed: {
             getTotalCount() {
                 let totalCount = 0
-
                 this.goodsList.forEach(item => {
                     if (item.isSelected) {
                         totalCount += item.buycount

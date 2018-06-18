@@ -269,6 +269,7 @@
                 const url = `site/goods/getgoodsinfo/${this.$route.params.goodsId}`
 
                 this.$axios.get(url).then(res => {
+                    console.log(res)
                     this.goods = res.data.message
                 }, err => {
                     console.log(err)

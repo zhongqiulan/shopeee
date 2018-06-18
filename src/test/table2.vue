@@ -3,11 +3,11 @@
     <!-- <router-link to="{ path:'/home/game', query: { num:  1} }" >默认按钮</router-link> -->
     
     <el-button @click="toGame">默认按钮</el-button>
-    <el-button round  @click="showModal = true">圆角按钮</el-button> 
-    <iframe-model v-if="showModal" @close="showModal = false">
+    <el-button round  @click="$store.commit('switch_dialog')">圆角按钮</el-button> 
+    <iframe-model v-if="$store.state.showModel.show" >
     </iframe-model>
     <el-upload
-               v-else
+               
                class='ensure ensureButt'
                :action="importFileUrl"
                :data="upLoadData"
@@ -33,8 +33,8 @@ export default {
   name: '',
   data () {
     return {
-      showModal: false,
-        importFileUrl: 'http:dtc.com/cpy/add',
+    
+      importFileUrl: 'http:dtc.com/cpy/add',
     upLoadData: {
         cpyId: '123456', 
         occurTime: '2017-08'

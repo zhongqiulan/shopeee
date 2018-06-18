@@ -41,6 +41,8 @@ const appbus = () => import("../test/appbus")
 const game = () => import("../test/game")
 const table4= () => import("../test/table4")
 const upload= () => import("../test/upload")
+const form= () => import("../form/form")
+const vuex1= () => import("../form/vuex1")
 
 const router = new VueRouter({
     routes: [
@@ -50,20 +52,16 @@ const router = new VueRouter({
         { path: '/goodsinfo/:goodsId', component: goodsinfo },
         { path:'/login',component:login},
         { path:'/table',component:table},
-        { 
-            path:'/table2',component:table2,
-        
-        },
-        { 
-            path:'/cicdMain',component:game,
-        
-        },
+        { path:'/table2',component:table2,},
+        { path:'/cicdMain',component:game,},
         { path:'/iframe',component:iframe},
         { path:'/table4',component:table4},
         { path:'/app',component:APP},
         { path:'/father',component:father},
         { path:'/appbus',component:appbus},
         { path:'/upload',component:upload},
+        { path:'/form',component:form},
+        { path:'/vuex1',component:vuex1},
         //==================华丽的分隔线，下面都是需要先判断是否登录的
         //meta 代表的是给某个路由规则额外设置些数据
         { path: '/order/:ids', component: order,meta: { requiresAuth: true } },

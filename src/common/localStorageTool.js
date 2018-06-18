@@ -6,6 +6,7 @@ const KEY = "goodsInfo"
  */
 const getLocalGoods = ()=>{
     return JSON.parse(localStorage.getItem(KEY) || '{}')
+    
 }
 
 /**

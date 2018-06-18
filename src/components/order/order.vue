@@ -176,6 +176,9 @@
         components: { VDistpicker },
         created() {
             this.getGoodsListData()
+            let url = JSON.stringify(this.orderInfo)
+            console.log(url)
+            console.log(this.$refs.ruleForm)
         },
         computed: {
             getPayAmount() {

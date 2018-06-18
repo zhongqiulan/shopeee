@@ -127,7 +127,7 @@
             //图片logo
             $("#container2").erweima({
                 mode: 4,
-                mSize:30,//设置大了扫描不到
+                mSize:10,//设置大了扫描不到
                 image: $("#imgLogo")[0],
                 text:`http://47.106.148.205:8899/site/validate/pay/alipay/${this.$route.params.orderId}`
             });

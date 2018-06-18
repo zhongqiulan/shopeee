@@ -5,7 +5,7 @@
             <div class="modal-wrapper">
                 <div class="modal-container">
                      
-                <i class="el-icon-close modal-default-button" @click="$emit('close')"></i>
+                <i class="el-icon-close modal-default-button" @click="$store.dispatch('switch_dialogss')"></i>
                     <iframe src="http://wwww.baidu.com"
                             marginheight="0" marginwidth="0" frameborder="0" scrolling="auto"
                             width='100%' height='600' id="iframepage" name="iframepage"  >

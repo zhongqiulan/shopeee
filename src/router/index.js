@@ -8,7 +8,8 @@ axios.defaults.baseURL = "http://47.106.148.205:8899/"
 //开启cookies
 axios.defaults.withCredentials = true
 Vue.prototype.$axios = axios
-
+// axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 //路由对象相关
 /**
 import goodslist from '../components/goods/goodslist'

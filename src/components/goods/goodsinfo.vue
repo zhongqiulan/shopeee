@@ -339,7 +339,7 @@
                 }
 
                 //调用Vuex的mutations方法
-                this.$store.commit('addGoods',goods)
+                this.$store.commit('ADD_GOODS',goods)
             },
             //动画相关，进入的动画
             beforeEnter: function (el) {

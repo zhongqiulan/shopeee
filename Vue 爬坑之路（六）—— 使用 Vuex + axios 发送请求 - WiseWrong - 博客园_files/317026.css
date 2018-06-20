@@ -1,0 +1,13 @@
+#header #blogTitle h2 {
+    line-height: 1.5;
+    margin-left: 4.2em;
+    color: #935A32;
+    font-size: 1.1em;
+    font-weight: 200;
+}
+#header #blogTitle h1 {
+    padding-top: 35px;
+}
+#home #footer {
+    padding-top: 40px;
+}

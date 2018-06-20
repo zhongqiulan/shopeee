@@ -205,7 +205,7 @@
                 })
 
                 //调用Vuex中的Mutations的updateGoods
-                this.$store.commit('updateGoods', {
+                this.$store.commit('UPDATE_GOODS', {
                     goodsId: goods.goodsId,
                     count: goods.goodsNumber
                 })

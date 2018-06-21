@@ -44,6 +44,7 @@ const table4= () => import("../test/table4")
 const upload= () => import("../test/upload")
 const form= () => import("../form/form")
 const vuex1= () => import("../form/vuex1")
+const select= () => import("../form/select")
 
 const router = new VueRouter({
     routes: [
@@ -63,6 +64,7 @@ const router = new VueRouter({
         { path:'/upload',component:upload},
         { path:'/form',component:form},
         { path:'/vuex1',component:vuex1},
+        { path:'/select',component:select},
         //==================华丽的分隔线，下面都是需要先判断是否登录的
         //meta 代表的是给某个路由规则额外设置些数据
         { path: '/order/:ids', component: order,meta: { requiresAuth: true } },

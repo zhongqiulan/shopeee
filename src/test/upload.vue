@@ -38,7 +38,7 @@
         return this.$confirm(`确定移除 ${ file.name }？`);
       },
       uploadSuccess(response, file, fileList){
-          console('fffffff')
+          console.log(file)
       }
     }
   }

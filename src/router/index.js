@@ -4,7 +4,7 @@ Vue.use(VueRouter) //Vue.propertype.$route Vue.propertype.$router
 
 import axios from 'axios'
 //设置baseURL
-axios.defaults.baseURL = "http://47.106.148.205:8899/"
+axios.defaults.baseURL = "http://127.0.0.1:8890"
 //开启cookies
 axios.defaults.withCredentials = true
 Vue.prototype.$axios = axios

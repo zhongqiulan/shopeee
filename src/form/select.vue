@@ -6,12 +6,12 @@
      @change="handleSelect"
       placeholder="请选择">
     <el-option
-      v-for="item in cities"
-      :key="item.value"
+      v-for="(item,index) in cities"
+      :key="index"
       :label="item.label"   
       :value="item">
       <span style="float: left">{{ item.label }}</span>
-      <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
+      <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>  
     </el-option>
   </el-select>
   </el-col>
@@ -33,19 +33,19 @@
           value: 'Shanghai',
           label: '上海'
         }, {
-          value: 'Nanjing',
+          value: 'Shanghai',
           label: '南京'
         }, {
-          value: 'Chengdu',
+          value: 'Shanghai',
           label: '成都'
         }, {
-          value: 'Shenzhen',
+          value: 'Shanghai',
           label: '深圳'
         }, {
-          value: 'Guangzhou',
+          value: 'Shanghai',
           label: '广州'
         }],
-        value6: '' ,
+        value6: '111' ,
         zhi:''
       };
     },
@@ -53,6 +53,7 @@
       handleSelect(item) {
         console.log(item.label);
         this.zhi = item.value
+        this.value6 = item.label
       }
     },
    

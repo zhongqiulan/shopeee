@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://www.kancloud.cn/yunye/axios/234845 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<title>使用说明 · Axios 中文说明  · 看云</title>
+    <meta name="description" content="Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。">
+    <meta name="keywords" content="javascript,axios">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <link rel="stylesheet" href="./使用说明 · Axios 中文说明 · 看云_files/reader.css">
+                <script src="./使用说明 · Axios 中文说明 · 看云_files/index.js.下载" async=""></script><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" data-react-helmet="true"><link rel="stylesheet" href="./使用说明 · Axios 中文说明 · 看云_files/style.css" data-react-helmet="true"></head>
+<body style="position: static;">
+<div id="main"><div class="root"><div class="window-container"><div class="window-head"><div class="toolbar"><a class="title" href="https://www.kancloud.cn/yunye/axios">Axios 中文说明</a><div class="extra"></div></div></div><div class="progress"><div class="progress-bar" style="width: 33.3333%;"></div></div><div class="window-body with-sidebar"><div class="sidebar"><div class="sidebar-header"><div class="search-form"><div class="ui small fluid icon input"><input type="text" placeholder="请输入搜索关键词..."><i class="icon search"></i></div></div></div><div class="sidebar-body"><div class="catalog-body active"><ul><li class="active"><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/yunye/axios/234845" class="text">使用说明</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/yunye/axios/234846" class="text">升级指南</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/yunye/axios/234847" class="text">生态系统</a></li></ul></div></div><div class="sidebar-copyright">本文档使用 <a href="http://www.kancloud.cn/" target="_blank">看云</a> 构建</div></div><div class="workspace"><div class="article-wrap"><div class="article"><div class="article-head"><div class="left floated tools"><a class="item icon"><i class="icon align justify"></i></a></div><div class="right floated tools"></div><h1>使用说明</h1></div><div class="article-body"><p>##Axios</p>
+<p><a href="https://www.npmjs.org/package/axios" target="_blank"><img alt="npm version" src="./使用说明 · Axios 中文说明 · 看云_files/axios.svg"></a><br><a href="https://travis-ci.org/mzabriskie/axios" target="_blank"><img alt="build status" src="./使用说明 · Axios 中文说明 · 看云_files/axios(1).svg"></a><br><a href="https://coveralls.io/r/mzabriskie/axios" target="_blank"><img alt="code coverage" src="./使用说明 · Axios 中文说明 · 看云_files/axios(2).svg"></a><br><a href="http://npm-stat.com/charts.html?package=axios" target="_blank"><img alt="npm downloads" src="./使用说明 · Axios 中文说明 · 看云_files/axios(3).svg"></a><br><a href="https://gitter.im/mzabriskie/axios" target="_blank"><img alt="gitter chat" src="./使用说明 · Axios 中文说明 · 看云_files/axios(4).svg"></a></p>
+<p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p>
+<h2 data-line="10" class="line"><a id="Features_10"></a>Features</h2>
+<ul><li>从浏览器中创建 <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank">XMLHttpRequests</a></li><li>从 node.js 创建 <a href="http://nodejs.org/api/http.html" target="_blank">http</a> 请求</li><li>支持 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promise</a> API</li><li>拦截请求和响应</li><li>转换请求数据和响应数据</li><li>取消请求</li><li>自动转换 JSON 数据</li><li>客户端支持防御 <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank">XSRF</a></li></ul>
+<h2 data-line="21" class="line"><a id="_21"></a>浏览器支持</h2>
+<table><thead><tr><th><span class="error-img" style="width: 48px;"><a href="https://help.kancloud.cn/388561" target="_blank" data-tooltip="查看帮助" data-position="bottom right" data-inverted="true" data-tooltip-small="true"><i class="help circle icon"></i></a><span class="placeholder" style="padding-top: 100%;"></span></span></th><th><span class="error-img" style="width: 48px;"><a href="https://help.kancloud.cn/388561" target="_blank" data-tooltip="查看帮助" data-position="bottom right" data-inverted="true" data-tooltip-small="true"><i class="help circle icon"></i></a><span class="placeholder" style="padding-top: 100%;"></span></span></th><th><span class="error-img" style="width: 48px;"><a href="https://help.kancloud.cn/388561" target="_blank" data-tooltip="查看帮助" data-position="bottom right" data-inverted="true" data-tooltip-small="true"><i class="help circle icon"></i></a><span class="placeholder" style="padding-top: 100%;"></span></span></th><th><span class="error-img" style="width: 48px;"><a href="https://help.kancloud.cn/388561" target="_blank" data-tooltip="查看帮助" data-position="bottom right" data-inverted="true" data-tooltip-small="true"><i class="help circle icon"></i></a><span class="placeholder" style="padding-top: 100%;"></span></span></th><th><span class="error-img" style="width: 48px;"><a href="https://help.kancloud.cn/388561" target="_blank" data-tooltip="查看帮助" data-position="bottom right" data-inverted="true" data-tooltip-small="true"><i class="help circle icon"></i></a><span class="placeholder" style="padding-top: 100%;"></span></span></th><th><span class="error-img" style="width: 48px;"><a href="https://help.kancloud.cn/388561" target="_blank" data-tooltip="查看帮助" data-position="bottom right" data-inverted="true" data-tooltip-small="true"><i class="help circle icon"></i></a><span class="placeholder" style="padding-top: 100%;"></span></span></th></tr></thead><tbody><tr><td>Latest ✔</td><td>Latest ✔</td><td>Latest ✔</td><td>Latest ✔</td><td>Latest ✔</td><td>8+ ✔</td></tr></tbody></table>
+<p><a href="https://saucelabs.com/u/axios" target="_blank"><img alt="Browser Matrix" src="./使用说明 · Axios 中文说明 · 看云_files/axios(5).svg"></a></p>
+<h2 data-line="29" class="line"><a id="_29"></a>安装</h2>
+<p>使用 npm:</p>
+<pre><code>$ npm install axios
+</code></pre>
+<p>使用 bower:</p>
+<pre><code>$ bower install axios
+</code></pre>
+<p>使用 cdn:</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/axios/dist/axios.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h2 data-line="49" class="line"><a id="Example_49"></a>Example</h2>
+<p>执行 <code>GET</code> 请求</p>
+<pre><code><span class="hljs-comment">// 为给定 ID 的 user 创建请求</span>
+axios.get(<span class="hljs-string">'/user?ID=12345'</span>)
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(response);
+  })
+  .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(error);
+  });
+
+<span class="hljs-comment">// 可选地，上面的请求可以这样做</span>
+axios.get(<span class="hljs-string">'/user'</span>, {
+    <span class="hljs-attr">params</span>: {
+      <span class="hljs-attr">ID</span>: <span class="hljs-number">12345</span>
+    }
+  })
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(response);
+  })
+  .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(error);
+  });
+</code></pre>
+<p>执行 <code>POST</code> 请求</p>
+<pre><code>axios.post(<span class="hljs-string">'/user'</span>, {
+    <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Fred'</span>,
+    <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Flintstone'</span>
+  })
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(response);
+  })
+  .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(error);
+  });
+</code></pre>
+<p>执行多个并发请求</p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUserAccount</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">'/user/12345'</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUserPermissions</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">'/user/12345/permissions'</span>);
+}
+
+axios.all([getUserAccount(), getUserPermissions()])
+  .then(axios.spread(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">acct, perms</span>) </span>{
+    <span class="hljs-comment">// 两个请求现在都执行完成</span>
+  }));
+</code></pre>
+<h2 data-line="109" class="line"><a id="axios_API_109"></a>axios API</h2>
+<p>可以通过向 <code>axios</code> 传递相关配置来创建请求</p>
+<h5 data-line="113" class="line"><a id="axiosconfig_113"></a>axios(config)</h5>
+<pre><code><span class="hljs-comment">// 发送 POST 请求</span>
+axios({
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'/user/12345'</span>,
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Fred'</span>,
+    <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Flintstone'</span>
+  }
+});
+</code></pre>
+<h5 data-line="127" class="line"><a id="axiosurl_config_127"></a>axios(url[, config])</h5>
+<pre><code><span class="hljs-comment">// 发送 GET 请求（默认的方法）</span>
+axios(<span class="hljs-string">'/user/12345'</span>);
+</code></pre>
+<h3 data-line="134" class="line"><a id="_134"></a>请求方法的别名</h3>
+<p>为方便起见，为所有支持的请求方法提供了别名</p>
+<h5 data-line="138" class="line"><a id="axiosrequestconfig_138"></a>axios.request(config)</h5>
+<h5 data-line="139" class="line"><a id="axiosgeturl_config_139"></a>axios.get(url[, config])</h5>
+<h5 data-line="140" class="line"><a id="axiosdeleteurl_config_140"></a>axios.delete(url[, config])</h5>
+<h5 data-line="141" class="line"><a id="axiosheadurl_config_141"></a>axios.head(url[, config])</h5>
+<h5 data-line="142" class="line"><a id="axiosposturl_data_config_142"></a>axios.post(url[, data[, config]])</h5>
+<h5 data-line="143" class="line"><a id="axiosputurl_data_config_143"></a>axios.put(url[, data[, config]])</h5>
+<h5 data-line="144" class="line"><a id="axiospatchurl_data_config_144"></a>axios.patch(url[, data[, config]])</h5>
+<h6 data-line="146" class="line"><a id="NOTE_146"></a>NOTE</h6>
+<p>在使用别名方法时， <code>url</code>、<code>method</code>、<code>data</code> 这些属性都不必在配置中指定。</p>
+<h3 data-line="149" class="line"><a id="_149"></a>并发</h3>
+<p>处理并发请求的助手函数</p>
+<h5 data-line="153" class="line"><a id="axiosalliterable_153"></a>axios.all(iterable)</h5>
+<h5 data-line="154" class="line"><a id="axiosspreadcallback_154"></a>axios.spread(callback)</h5>
+<h3 data-line="156" class="line"><a id="_156"></a>创建实例</h3>
+<p>可以使用自定义配置新建一个 axios 实例</p>
+<h5 data-line="160" class="line"><a id="axioscreateconfig_160"></a>axios.create([config])</h5>
+<pre><code><span class="hljs-keyword">var</span> instance = axios.create({
+  <span class="hljs-attr">baseURL</span>: <span class="hljs-string">'https://some-domain.com/api/'</span>,
+  <span class="hljs-attr">timeout</span>: <span class="hljs-number">1000</span>,
+  <span class="hljs-attr">headers</span>: {<span class="hljs-string">'X-Custom-Header'</span>: <span class="hljs-string">'foobar'</span>}
+});
+</code></pre>
+<h3 data-line="170" class="line"><a id="_170"></a>实例方法</h3>
+<p>以下是可用的实例方法。指定的配置将与实例的配置合并</p>
+<h5 data-line="174" class="line"><a id="axiosrequestconfig_174"></a>axios#request(config)</h5>
+<h5 data-line="175" class="line"><a id="axiosgeturl_config_175"></a>axios#get(url[, config])</h5>
+<h5 data-line="176" class="line"><a id="axiosdeleteurl_config_176"></a>axios#delete(url[, config])</h5>
+<h5 data-line="177" class="line"><a id="axiosheadurl_config_177"></a>axios#head(url[, config])</h5>
+<h5 data-line="178" class="line"><a id="axiosposturl_data_config_178"></a>axios#post(url[, data[, config]])</h5>
+<h5 data-line="179" class="line"><a id="axiosputurl_data_config_179"></a>axios#put(url[, data[, config]])</h5>
+<h5 data-line="180" class="line"><a id="axiospatchurl_data_config_180"></a>axios#patch(url[, data[, config]])</h5>
+<h2 data-line="182" class="line"><a id="_182"></a>请求配置</h2>
+<p>这些是创建请求时可以用的配置选项。只有 <code>url</code> 是必需的。如果没有指定 <code>method</code>，请求将默认使用 <code>get</code> 方法。</p>
+<pre><code>{
+  <span class="hljs-comment">// `url` 是用于请求的服务器 URL</span>
+  url: <span class="hljs-string">'/user'</span>,
+
+  <span class="hljs-comment">// `method` 是创建请求时使用的方法</span>
+  method: <span class="hljs-string">'get'</span>, <span class="hljs-comment">// 默认是 get</span>
+
+  <span class="hljs-comment">// `baseURL` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL。</span>
+  <span class="hljs-comment">// 它可以通过设置一个 `baseURL` 便于为 axios 实例的方法传递相对 URL</span>
+  baseURL: <span class="hljs-string">'https://some-domain.com/api/'</span>,
+
+  <span class="hljs-comment">// `transformRequest` 允许在向服务器发送前，修改请求数据</span>
+  <span class="hljs-comment">// 只能用在 'PUT', 'POST' 和 'PATCH' 这几个请求方法</span>
+  <span class="hljs-comment">// 后面数组中的函数必须返回一个字符串，或 ArrayBuffer，或 Stream</span>
+  transformRequest: [<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+    <span class="hljs-comment">// 对 data 进行任意转换处理</span>
+
+    <span class="hljs-keyword">return</span> data;
+  }],
+
+  <span class="hljs-comment">// `transformResponse` 在传递给 then/catch 前，允许修改响应数据</span>
+  transformResponse: [<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+    <span class="hljs-comment">// 对 data 进行任意转换处理</span>
+
+    <span class="hljs-keyword">return</span> data;
+  }],
+
+  <span class="hljs-comment">// `headers` 是即将被发送的自定义请求头</span>
+  headers: {<span class="hljs-string">'X-Requested-With'</span>: <span class="hljs-string">'XMLHttpRequest'</span>},
+
+  <span class="hljs-comment">// `params` 是即将与请求一起发送的 URL 参数</span>
+  <span class="hljs-comment">// 必须是一个无格式对象(plain object)或 URLSearchParams 对象</span>
+  params: {
+    <span class="hljs-attr">ID</span>: <span class="hljs-number">12345</span>
+  },
+
+  <span class="hljs-comment">// `paramsSerializer` 是一个负责 `params` 序列化的函数</span>
+  <span class="hljs-comment">// (e.g. https://www.npmjs.com/package/qs, http://api.jquery.com/jquery.param/)</span>
+  paramsSerializer: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">params</span>) </span>{
+    <span class="hljs-keyword">return</span> Qs.stringify(params, {<span class="hljs-attr">arrayFormat</span>: <span class="hljs-string">'brackets'</span>})
+  },
+
+  <span class="hljs-comment">// `data` 是作为请求主体被发送的数据</span>
+  <span class="hljs-comment">// 只适用于这些请求方法 'PUT', 'POST', 和 'PATCH'</span>
+  <span class="hljs-comment">// 在没有设置 `transformRequest` 时，必须是以下类型之一：</span>
+  <span class="hljs-comment">// - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams</span>
+  <span class="hljs-comment">// - 浏览器专属：FormData, File, Blob</span>
+  <span class="hljs-comment">// - Node 专属： Stream</span>
+  data: {
+    <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Fred'</span>
+  },
+
+  <span class="hljs-comment">// `timeout` 指定请求超时的毫秒数(0 表示无超时时间)</span>
+  <span class="hljs-comment">// 如果请求话费了超过 `timeout` 的时间，请求将被中断</span>
+  timeout: <span class="hljs-number">1000</span>,
+
+  <span class="hljs-comment">// `withCredentials` 表示跨域请求时是否需要使用凭证</span>
+  withCredentials: <span class="hljs-literal">false</span>, <span class="hljs-comment">// 默认的</span>
+
+  <span class="hljs-comment">// `adapter` 允许自定义处理请求，以使测试更轻松</span>
+  <span class="hljs-comment">// 返回一个 promise 并应用一个有效的响应 (查阅 [response docs](#response-api)).</span>
+  adapter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">config</span>) </span>{
+    <span class="hljs-comment">/* ... */</span>
+  },
+
+  <span class="hljs-comment">// `auth` 表示应该使用 HTTP 基础验证，并提供凭据</span>
+  <span class="hljs-comment">// 这将设置一个 `Authorization` 头，覆写掉现有的任意使用 `headers` 设置的自定义 `Authorization`头</span>
+  auth: {
+    <span class="hljs-attr">username</span>: <span class="hljs-string">'janedoe'</span>,
+    <span class="hljs-attr">password</span>: <span class="hljs-string">'s00pers3cret'</span>
+  },
+
+  <span class="hljs-comment">// `responseType` 表示服务器响应的数据类型，可以是 'arraybuffer', 'blob', 'document', 'json', 'text', 'stream'</span>
+  responseType: <span class="hljs-string">'json'</span>, <span class="hljs-comment">// 默认的</span>
+
+  <span class="hljs-comment">// `xsrfCookieName` 是用作 xsrf token 的值的cookie的名称</span>
+  xsrfCookieName: <span class="hljs-string">'XSRF-TOKEN'</span>, <span class="hljs-comment">// default</span>
+
+  <span class="hljs-comment">// `xsrfHeaderName` 是承载 xsrf token 的值的 HTTP 头的名称</span>
+  xsrfHeaderName: <span class="hljs-string">'X-XSRF-TOKEN'</span>, <span class="hljs-comment">// 默认的</span>
+
+  <span class="hljs-comment">// `onUploadProgress` 允许为上传处理进度事件</span>
+  onUploadProgress: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">progressEvent</span>) </span>{
+    <span class="hljs-comment">// 对原生进度事件的处理</span>
+  },
+
+  <span class="hljs-comment">// `onDownloadProgress` 允许为下载处理进度事件</span>
+  onDownloadProgress: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">progressEvent</span>) </span>{
+    <span class="hljs-comment">// 对原生进度事件的处理</span>
+  },
+
+  <span class="hljs-comment">// `maxContentLength` 定义允许的响应内容的最大尺寸</span>
+  maxContentLength: <span class="hljs-number">2000</span>,
+
+  <span class="hljs-comment">// `validateStatus` 定义对于给定的HTTP 响应状态码是 resolve 或 reject  promise 。如果 `validateStatus` 返回 `true` (或者设置为 `null` 或 `undefined`)，promise 将被 resolve; 否则，promise 将被 rejecte</span>
+  validateStatus: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">status</span>) </span>{
+    <span class="hljs-keyword">return</span> status &gt;= <span class="hljs-number">200</span> &amp;&amp; status &lt; <span class="hljs-number">300</span>; <span class="hljs-comment">// 默认的</span>
+  },
+
+  <span class="hljs-comment">// `maxRedirects` 定义在 node.js 中 follow 的最大重定向数目</span>
+  <span class="hljs-comment">// 如果设置为0，将不会 follow 任何重定向</span>
+  maxRedirects: <span class="hljs-number">5</span>, <span class="hljs-comment">// 默认的</span>
+
+  <span class="hljs-comment">// `httpAgent` 和 `httpsAgent` 分别在 node.js 中用于定义在执行 http 和 https 时使用的自定义代理。允许像这样配置选项：</span>
+  <span class="hljs-comment">// `keepAlive` 默认没有启用</span>
+  httpAgent: <span class="hljs-keyword">new</span> http.Agent({ <span class="hljs-attr">keepAlive</span>: <span class="hljs-literal">true</span> }),
+  <span class="hljs-attr">httpsAgent</span>: <span class="hljs-keyword">new</span> https.Agent({ <span class="hljs-attr">keepAlive</span>: <span class="hljs-literal">true</span> }),
+
+  <span class="hljs-comment">// 'proxy' 定义代理服务器的主机名称和端口</span>
+  <span class="hljs-comment">// `auth` 表示 HTTP 基础验证应当用于连接代理，并提供凭据</span>
+  <span class="hljs-comment">// 这将会设置一个 `Proxy-Authorization` 头，覆写掉已有的通过使用 `header` 设置的自定义 `Proxy-Authorization` 头。</span>
+  proxy: {
+    <span class="hljs-attr">host</span>: <span class="hljs-string">'127.0.0.1'</span>,
+    <span class="hljs-attr">port</span>: <span class="hljs-number">9000</span>,
+    <span class="hljs-attr">auth</span>: : {
+      <span class="hljs-attr">username</span>: <span class="hljs-string">'mikeymike'</span>,
+      <span class="hljs-attr">password</span>: <span class="hljs-string">'rapunz3l'</span>
+    }
+  },
+
+  <span class="hljs-comment">// `cancelToken` 指定用于取消请求的 cancel token</span>
+  <span class="hljs-comment">// （查看后面的 Cancellation 这节了解更多）</span>
+  cancelToken: <span class="hljs-keyword">new</span> CancelToken(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">cancel</span>) </span>{
+  })
+}
+</code></pre>
+<h2 data-line="314" class="line"><a id="_314"></a>响应结构</h2>
+<p>某个请求的响应包含以下信息</p>
+<pre><code>{
+  <span class="hljs-comment">// `data` 由服务器提供的响应</span>
+  data: {},
+
+  <span class="hljs-comment">// `status` 来自服务器响应的 HTTP 状态码</span>
+  status: <span class="hljs-number">200</span>,
+
+  <span class="hljs-comment">// `statusText` 来自服务器响应的 HTTP 状态信息</span>
+  statusText: <span class="hljs-string">'OK'</span>,
+
+  <span class="hljs-comment">// `headers` 服务器响应的头</span>
+  headers: {},
+
+  <span class="hljs-comment">// `config` 是为请求提供的配置信息</span>
+  config: {}
+}
+</code></pre>
+<p>使用 <code>then</code> 时，你将接收下面这样的响应：</p>
+<pre><code>axios.get(<span class="hljs-string">'/user/12345'</span>)
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(response.data);
+    <span class="hljs-built_in">console</span>.log(response.status);
+    <span class="hljs-built_in">console</span>.log(response.statusText);
+    <span class="hljs-built_in">console</span>.log(response.headers);
+    <span class="hljs-built_in">console</span>.log(response.config);
+  });
+</code></pre>
+<p>在使用 <code>catch</code> 时，或传递 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" target="_blank">rejection callback</a> 作为 <code>then</code> 的第二个参数时，响应可以通过 <code>error</code> 对象可被使用，正如在<a href="https://www.kancloud.cn/yunye/axios/234845#handling-errors">错误处理</a>这一节所讲。</p>
+<h2 data-line="352" class="line"><a id="defaults_352"></a>配置的默认值/defaults</h2>
+<p>你可以指定将被用在各个请求的配置默认值</p>
+<h3 data-line="356" class="line"><a id="_axios__356"></a>全局的 axios 默认值</h3>
+<pre><code>axios.defaults.baseURL = <span class="hljs-string">'https://api.example.com'</span>;
+axios.defaults.headers.common[<span class="hljs-string">'Authorization'</span>] = AUTH_TOKEN;
+axios.defaults.headers.post[<span class="hljs-string">'Content-Type'</span>] = <span class="hljs-string">'application/x-www-form-urlencoded'</span>;
+</code></pre>
+<h3 data-line="364" class="line"><a id="_364"></a>自定义实例默认值</h3>
+<pre><code><span class="hljs-comment">// 创建实例时设置配置的默认值</span>
+<span class="hljs-keyword">var</span> instance = axios.create({
+  <span class="hljs-attr">baseURL</span>: <span class="hljs-string">'https://api.example.com'</span>
+});
+
+<span class="hljs-comment">// 在实例已创建后修改默认值</span>
+instance.defaults.headers.common[<span class="hljs-string">'Authorization'</span>] = AUTH_TOKEN;
+</code></pre>
+<h3 data-line="376" class="line"><a id="_376"></a>配置的优先顺序</h3>
+<p>配置会以一个优先顺序进行合并。这个顺序是：在 <code>lib/defaults.js</code> 找到的库的默认值，然后是实例的 <code>defaults</code> 属性，最后是请求的 <code>config</code> 参数。后者将优先于前者。这里是一个例子：</p>
+<pre><code><span class="hljs-comment">// 使用由库提供的配置的默认值来创建实例</span>
+<span class="hljs-comment">// 此时超时配置的默认值是 `0`</span>
+<span class="hljs-keyword">var</span> instance = axios.create();
+
+<span class="hljs-comment">// 覆写库的超时默认值</span>
+<span class="hljs-comment">// 现在，在超时前，所有请求都会等待 2.5 秒</span>
+instance.defaults.timeout = <span class="hljs-number">2500</span>;
+
+<span class="hljs-comment">// 为已知需要花费很长时间的请求覆写超时设置</span>
+instance.get(<span class="hljs-string">'/longRequest'</span>, {
+  <span class="hljs-attr">timeout</span>: <span class="hljs-number">5000</span>
+});
+</code></pre>
+<h2 data-line="395" class="line"><a id="_395"></a>拦截器</h2>
+<p>在请求或响应被 <code>then</code> 或 <code>catch</code> 处理前拦截它们。</p>
+<pre><code><span class="hljs-comment">// 添加请求拦截器</span>
+axios.interceptors.request.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">config</span>) </span>{
+    <span class="hljs-comment">// 在发送请求之前做些什么</span>
+    <span class="hljs-keyword">return</span> config;
+  }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-comment">// 对请求错误做些什么</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.reject(error);
+  });
+
+<span class="hljs-comment">// 添加响应拦截器</span>
+axios.interceptors.response.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+    <span class="hljs-comment">// 对响应数据做点什么</span>
+    <span class="hljs-keyword">return</span> response;
+  }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-comment">// 对响应错误做点什么</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.reject(error);
+  });
+</code></pre>
+<p>如果你想在稍后移除拦截器，可以这样：</p>
+<pre><code><span class="hljs-keyword">var</span> myInterceptor = axios.interceptors.request.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{<span class="hljs-comment">/*...*/</span>});
+axios.interceptors.request.eject(myInterceptor);
+</code></pre>
+<p>可以为自定义 axios 实例添加拦截器</p>
+<pre><code><span class="hljs-keyword">var</span> instance = axios.create();
+instance.interceptors.request.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{<span class="hljs-comment">/*...*/</span>});
+</code></pre>
+<h2 data-line="433" class="line"><a id="_433"></a>错误处理</h2>
+<pre><code>axios.get(<span class="hljs-string">'/user/12345'</span>)
+  .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-keyword">if</span> (error.response) {
+      <span class="hljs-comment">// 请求已发出，但服务器响应的状态码不在 2xx 范围内</span>
+      <span class="hljs-built_in">console</span>.log(error.response.data);
+      <span class="hljs-built_in">console</span>.log(error.response.status);
+      <span class="hljs-built_in">console</span>.log(error.response.headers);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// Something happened in setting up the request that triggered an Error</span>
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Error'</span>, error.message);
+    }
+    <span class="hljs-built_in">console</span>.log(error.config);
+  });
+</code></pre>
+<p>可以使用 <code>validateStatus</code> 配置选项定义一个自定义 HTTP 状态码的错误范围。</p>
+<pre><code>axios.get(<span class="hljs-string">'/user/12345'</span>, {
+  <span class="hljs-attr">validateStatus</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">status</span>) </span>{
+    <span class="hljs-keyword">return</span> status &lt; <span class="hljs-number">500</span>; <span class="hljs-comment">// 状态码在大于或等于500时才会 reject</span>
+  }
+})
+</code></pre>
+<h2 data-line="461" class="line"><a id="_461"></a>取消</h2>
+<p>使用 <em>cancel token</em> 取消请求</p>
+<blockquote class="default"><p>Axios 的 cancel token API 基于<a href="https://github.com/tc39/proposal-cancelable-promises" target="_blank">cancelable promises proposal</a>，它还处于第一阶段。</p></blockquote>
+<p>可以使用 <code>CancelToken.source</code> 工厂方法创建 cancel token，像这样：</p>
+<pre><code><span class="hljs-keyword">var</span> CancelToken = axios.CancelToken;
+<span class="hljs-keyword">var</span> source = CancelToken.source();
+
+axios.get(<span class="hljs-string">'/user/12345'</span>, {
+  <span class="hljs-attr">cancelToken</span>: source.token
+}).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">thrown</span>) </span>{
+  <span class="hljs-keyword">if</span> (axios.isCancel(thrown)) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Request canceled'</span>, thrown.message);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// 处理错误</span>
+  }
+});
+
+<span class="hljs-comment">// 取消请求（message 参数是可选的）</span>
+source.cancel(<span class="hljs-string">'Operation canceled by the user.'</span>);
+</code></pre>
+<p>还可以通过传递一个 executor 函数到 <code>CancelToken</code> 的构造函数来创建 cancel token：</p>
+<pre><code><span class="hljs-keyword">var</span> CancelToken = axios.CancelToken;
+<span class="hljs-keyword">var</span> cancel;
+
+axios.get(<span class="hljs-string">'/user/12345'</span>, {
+  <span class="hljs-attr">cancelToken</span>: <span class="hljs-keyword">new</span> CancelToken(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">executor</span>(<span class="hljs-params">c</span>) </span>{
+    <span class="hljs-comment">// executor 函数接收一个 cancel 函数作为参数</span>
+    cancel = c;
+  })
+});
+
+<span class="hljs-comment">// 取消请求</span>
+cancel();
+</code></pre>
+<p>Note : 可以使用同一个 cancel token 取消多个请求</p>
+<h2 data-line="506" class="line"><a id="Semver_506"></a>Semver</h2>
+<p>Until axios reaches a <code>1.0</code> release, breaking changes will be released with a new minor version. For example <code>0.5.1</code>, and <code>0.5.4</code> will have the same API, but <code>0.6.0</code> will have breaking changes.</p>
+<h2 data-line="510" class="line"><a id="Promises_510"></a>Promises</h2>
+<p>axios 依赖原生的 ES6 Promise 实现而<a href="http://caniuse.com/promises" target="_blank">被支持</a>.<br>
+如果你的环境不支持 ES6 Promise，你可以使用 <a href="https://github.com/jakearchibald/es6-promise" target="_blank">polyfill</a>.</p>
+<h2 data-line="515" class="line"><a id="TypeScript_515"></a>TypeScript</h2>
+<p>axios includes <a href="http://typescriptlang.org/" target="_blank">TypeScript</a> definitions.</p>
+<pre><code><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">'axios'</span>;
+axios.get(<span class="hljs-string">'/user?ID=12345'</span>);
+</code></pre>
+<h2 data-line="522" class="line"><a id="Resources_522"></a>Resources</h2>
+<ul><li><a href="https://github.com/mzabriskie/axios/blob/master/CHANGELOG.md" target="_blank">Changelog</a></li><li><a href="https://github.com/mzabriskie/axios/blob/master/UPGRADE_GUIDE.md" target="_blank">Upgrade Guide</a></li><li><a href="https://github.com/mzabriskie/axios/blob/master/ECOSYSTEM.md" target="_blank">Ecosystem</a></li><li><a href="https://github.com/mzabriskie/axios/blob/master/CONTRIBUTING.md" target="_blank">Contributing Guide</a></li><li><a href="https://github.com/mzabriskie/axios/blob/master/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a></li></ul>
+<h2 data-line="530" class="line"><a id="Credits_530"></a>Credits</h2>
+<p>axios is heavily inspired by the <a href="https://docs.angularjs.org/api/ng/service/$http" target="_blank">$http service</a> provided in <a href="https://angularjs.org/" target="_blank">Angular</a>. Ultimately axios is an effort to provide a standalone <code>$http</code>-like service for use outside of Angular.</p>
+<h2 data-line="534" class="line"><a id="License_534"></a>License</h2>
+<p>MIT</p>
+</div><div class="article-navigation"><span class="next">下一篇：<a href="https://www.kancloud.cn/yunye/axios/234846">升级指南</a></span></div><div class="article-comment"><h3 class="ui header dividing">相关评论(1)</h3><form class="ui form"><input type="hidden" name="article_id" value="234845"><div class="field"><textarea name="content" placeholder="文明上网,理性发言" rows="4"></textarea></div><button type="submit" class="ui green submit button right floated small">发布 (Ctrl+Enter)</button></form><div class="ui comments"><div class="comment"><a class="avatar"><img src="./使用说明 · Axios 中文说明 · 看云_files/c9fafc0e652214abee9ddfe428bc82!middle"></a><div class="content"><a class="author">一汀烟雨</a><div class="metadata">@yuxianwen ·<span class="date">7 个月前</span></div><div class="text article-body"><p>拦截器错误时（token失效），能再次请求一次么（重新获得token后）?就好了啊</p>
+</div><div class="actions"><a><i class="icon reply"></i>回复</a></div></div></div></div></div></div></div></div></div></div></div></div>
+<script type="application/payload+json">
+    {
+        "config":{"plugins":["highlight"],"id":26419,"name":"yunye\/axios","title":"Axios \u4e2d\u6587\u8bf4\u660e","sha":"27fb37ae140b5c435a01ddf443f0a04283e1102a","price":0},
+        "catalog":[{"id":234845,"pid":0,"name":"readme.md","title":"\u4f7f\u7528\u8bf4\u660e","index":0},{"id":234846,"pid":0,"name":"UPGRADE_GUIDE.md","title":"\u5347\u7ea7\u6307\u5357","index":1},{"id":234847,"pid":0,"name":"Ecosystem.md","title":"\u751f\u6001\u7cfb\u7edf","index":2}],
+        "article":{"id":234845,"book_id":26419,"pid":0,"name":"readme.md","title":"\u4f7f\u7528\u8bf4\u660e","sha":"0b2ca7233a7828b8958667262bb7b7d01db27f53","content":"##Axios\n\n[![npm version](https:\/\/img.shields.io\/npm\/v\/axios.svg?style=flat-square)](https:\/\/www.npmjs.org\/package\/axios)\n[![build status](https:\/\/img.shields.io\/travis\/mzabriskie\/axios.svg?style=flat-square)](https:\/\/travis-ci.org\/mzabriskie\/axios)\n[![code coverage](https:\/\/img.shields.io\/coveralls\/mzabriskie\/axios.svg?style=flat-square)](https:\/\/coveralls.io\/r\/mzabriskie\/axios)\n[![npm downloads](https:\/\/img.shields.io\/npm\/dm\/axios.svg?style=flat-square)](http:\/\/npm-stat.com\/charts.html?package=axios)\n[![gitter chat](https:\/\/img.shields.io\/gitter\/room\/mzabriskie\/axios.svg?style=flat-square)](https:\/\/gitter.im\/mzabriskie\/axios)\n\nAxios \u662f\u4e00\u4e2a\u57fa\u4e8e promise \u7684 HTTP \u5e93\uff0c\u53ef\u4ee5\u7528\u5728\u6d4f\u89c8\u5668\u548c node.js \u4e2d\u3002\n\n## Features\n\n- \u4ece\u6d4f\u89c8\u5668\u4e2d\u521b\u5efa [XMLHttpRequests](https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/API\/XMLHttpRequest)\n- \u4ece node.js \u521b\u5efa [http](http:\/\/nodejs.org\/api\/http.html) \u8bf7\u6c42\n- \u652f\u6301 [Promise](https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/JavaScript\/Reference\/Global_Objects\/Promise) API\n- \u62e6\u622a\u8bf7\u6c42\u548c\u54cd\u5e94\n- \u8f6c\u6362\u8bf7\u6c42\u6570\u636e\u548c\u54cd\u5e94\u6570\u636e\n- \u53d6\u6d88\u8bf7\u6c42\n- \u81ea\u52a8\u8f6c\u6362 JSON \u6570\u636e\n- \u5ba2\u6237\u7aef\u652f\u6301\u9632\u5fa1 [XSRF](http:\/\/en.wikipedia.org\/wiki\/Cross-site_request_forgery)\n\n## \u6d4f\u89c8\u5668\u652f\u6301\n\n|![Chrome](https:\/\/raw.github.com\/alrra\/browser-logos\/master\/chrome\/chrome_48x48.png) | ![Firefox](https:\/\/raw.github.com\/alrra\/browser-logos\/master\/firefox\/firefox_48x48.png) | ![Safari](https:\/\/raw.github.com\/alrra\/browser-logos\/master\/safari\/safari_48x48.png) | ![Opera](https:\/\/raw.github.com\/alrra\/browser-logos\/master\/opera\/opera_48x48.png) | ![Edge](https:\/\/raw.github.com\/alrra\/browser-logos\/master\/edge\/edge_48x48.png) | ![IE](https:\/\/raw.github.com\/alrra\/browser-logos\/master\/internet-explorer\/internet-explorer_48x48.png) |\n|--- | --- | --- | --- | --- | --- |\n|Latest \u2714 | Latest \u2714 | Latest \u2714 | Latest \u2714 | Latest \u2714 | 8+ \u2714 |\n\n[![Browser Matrix](https:\/\/saucelabs.com\/open_sauce\/build_matrix\/axios.svg)](https:\/\/saucelabs.com\/u\/axios)\n\n## \u5b89\u88c5\n\n\u4f7f\u7528 npm:\n\n```bash\n$ npm install axios\n```\n\n\u4f7f\u7528 bower:\n\n```bash\n$ bower install axios\n```\n\n\u4f7f\u7528 cdn:\n\n```html\n<script src=\"https:\/\/unpkg.com\/axios\/dist\/axios.min.js\"><\/script>\n```\n\n## Example\n\n\u6267\u884c `GET` \u8bf7\u6c42\n\n```js\n\/\/ \u4e3a\u7ed9\u5b9a ID \u7684 user \u521b\u5efa\u8bf7\u6c42\naxios.get('\/user?ID=12345')\n  .then(function (response) {\n    console.log(response);\n  })\n  .catch(function (error) {\n    console.log(error);\n  });\n\n\/\/ \u53ef\u9009\u5730\uff0c\u4e0a\u9762\u7684\u8bf7\u6c42\u53ef\u4ee5\u8fd9\u6837\u505a\naxios.get('\/user', {\n    params: {\n      ID: 12345\n    }\n  })\n  .then(function (response) {\n    console.log(response);\n  })\n  .catch(function (error) {\n    console.log(error);\n  });\n```\n\n\u6267\u884c `POST` \u8bf7\u6c42\n\n```js\naxios.post('\/user', {\n    firstName: 'Fred',\n    lastName: 'Flintstone'\n  })\n  .then(function (response) {\n    console.log(response);\n  })\n  .catch(function (error) {\n    console.log(error);\n  });\n```\n\n\u6267\u884c\u591a\u4e2a\u5e76\u53d1\u8bf7\u6c42\n\n```js\nfunction getUserAccount() {\n  return axios.get('\/user\/12345');\n}\n\nfunction getUserPermissions() {\n  return axios.get('\/user\/12345\/permissions');\n}\n\naxios.all([getUserAccount(), getUserPermissions()])\n  .then(axios.spread(function (acct, perms) {\n    \/\/ \u4e24\u4e2a\u8bf7\u6c42\u73b0\u5728\u90fd\u6267\u884c\u5b8c\u6210\n  }));\n```\n\n## axios API\n\n\u53ef\u4ee5\u901a\u8fc7\u5411 `axios` \u4f20\u9012\u76f8\u5173\u914d\u7f6e\u6765\u521b\u5efa\u8bf7\u6c42\n\n##### axios(config)\n\n```js\n\/\/ \u53d1\u9001 POST \u8bf7\u6c42\naxios({\n  method: 'post',\n  url: '\/user\/12345',\n  data: {\n    firstName: 'Fred',\n    lastName: 'Flintstone'\n  }\n});\n```\n\n##### axios(url[, config])\n\n```js\n\/\/ \u53d1\u9001 GET \u8bf7\u6c42\uff08\u9ed8\u8ba4\u7684\u65b9\u6cd5\uff09\naxios('\/user\/12345');\n```\n\n### \u8bf7\u6c42\u65b9\u6cd5\u7684\u522b\u540d\n\n\u4e3a\u65b9\u4fbf\u8d77\u89c1\uff0c\u4e3a\u6240\u6709\u652f\u6301\u7684\u8bf7\u6c42\u65b9\u6cd5\u63d0\u4f9b\u4e86\u522b\u540d\n\n##### axios.request(config)\n##### axios.get(url[, config])\n##### axios.delete(url[, config])\n##### axios.head(url[, config])\n##### axios.post(url[, data[, config]])\n##### axios.put(url[, data[, config]])\n##### axios.patch(url[, data[, config]])\n\n###### NOTE\n\u5728\u4f7f\u7528\u522b\u540d\u65b9\u6cd5\u65f6\uff0c `url`\u3001`method`\u3001`data` \u8fd9\u4e9b\u5c5e\u6027\u90fd\u4e0d\u5fc5\u5728\u914d\u7f6e\u4e2d\u6307\u5b9a\u3002\n\n### \u5e76\u53d1\n\n\u5904\u7406\u5e76\u53d1\u8bf7\u6c42\u7684\u52a9\u624b\u51fd\u6570\n\n##### axios.all(iterable)\n##### axios.spread(callback)\n\n### \u521b\u5efa\u5b9e\u4f8b\n\n\u53ef\u4ee5\u4f7f\u7528\u81ea\u5b9a\u4e49\u914d\u7f6e\u65b0\u5efa\u4e00\u4e2a axios \u5b9e\u4f8b\n\n##### axios.create([config])\n\n```js\nvar instance = axios.create({\n  baseURL: 'https:\/\/some-domain.com\/api\/',\n  timeout: 1000,\n  headers: {'X-Custom-Header': 'foobar'}\n});\n```\n\n### \u5b9e\u4f8b\u65b9\u6cd5\n\n\u4ee5\u4e0b\u662f\u53ef\u7528\u7684\u5b9e\u4f8b\u65b9\u6cd5\u3002\u6307\u5b9a\u7684\u914d\u7f6e\u5c06\u4e0e\u5b9e\u4f8b\u7684\u914d\u7f6e\u5408\u5e76\n\n##### axios#request(config)\n##### axios#get(url[, config])\n##### axios#delete(url[, config])\n##### axios#head(url[, config])\n##### axios#post(url[, data[, config]])\n##### axios#put(url[, data[, config]])\n##### axios#patch(url[, data[, config]])\n\n## \u8bf7\u6c42\u914d\u7f6e\n\n\u8fd9\u4e9b\u662f\u521b\u5efa\u8bf7\u6c42\u65f6\u53ef\u4ee5\u7528\u7684\u914d\u7f6e\u9009\u9879\u3002\u53ea\u6709 `url` \u662f\u5fc5\u9700\u7684\u3002\u5982\u679c\u6ca1\u6709\u6307\u5b9a `method`\uff0c\u8bf7\u6c42\u5c06\u9ed8\u8ba4\u4f7f\u7528 `get` \u65b9\u6cd5\u3002\n\n```js\n{\n  \/\/ `url` \u662f\u7528\u4e8e\u8bf7\u6c42\u7684\u670d\u52a1\u5668 URL\n  url: '\/user',\n\n  \/\/ `method` \u662f\u521b\u5efa\u8bf7\u6c42\u65f6\u4f7f\u7528\u7684\u65b9\u6cd5\n  method: 'get', \/\/ \u9ed8\u8ba4\u662f get\n\n  \/\/ `baseURL` \u5c06\u81ea\u52a8\u52a0\u5728 `url` \u524d\u9762\uff0c\u9664\u975e `url` \u662f\u4e00\u4e2a\u7edd\u5bf9 URL\u3002\n  \/\/ \u5b83\u53ef\u4ee5\u901a\u8fc7\u8bbe\u7f6e\u4e00\u4e2a `baseURL` \u4fbf\u4e8e\u4e3a axios \u5b9e\u4f8b\u7684\u65b9\u6cd5\u4f20\u9012\u76f8\u5bf9 URL\n  baseURL: 'https:\/\/some-domain.com\/api\/',\n\n  \/\/ `transformRequest` \u5141\u8bb8\u5728\u5411\u670d\u52a1\u5668\u53d1\u9001\u524d\uff0c\u4fee\u6539\u8bf7\u6c42\u6570\u636e\n  \/\/ \u53ea\u80fd\u7528\u5728 'PUT', 'POST' \u548c 'PATCH' \u8fd9\u51e0\u4e2a\u8bf7\u6c42\u65b9\u6cd5\n  \/\/ \u540e\u9762\u6570\u7ec4\u4e2d\u7684\u51fd\u6570\u5fc5\u987b\u8fd4\u56de\u4e00\u4e2a\u5b57\u7b26\u4e32\uff0c\u6216 ArrayBuffer\uff0c\u6216 Stream\n  transformRequest: [function (data) {\n    \/\/ \u5bf9 data \u8fdb\u884c\u4efb\u610f\u8f6c\u6362\u5904\u7406\n\n    return data;\n  }],\n\n  \/\/ `transformResponse` \u5728\u4f20\u9012\u7ed9 then\/catch \u524d\uff0c\u5141\u8bb8\u4fee\u6539\u54cd\u5e94\u6570\u636e\n  transformResponse: [function (data) {\n    \/\/ \u5bf9 data \u8fdb\u884c\u4efb\u610f\u8f6c\u6362\u5904\u7406\n\n    return data;\n  }],\n\n  \/\/ `headers` \u662f\u5373\u5c06\u88ab\u53d1\u9001\u7684\u81ea\u5b9a\u4e49\u8bf7\u6c42\u5934\n  headers: {'X-Requested-With': 'XMLHttpRequest'},\n\n  \/\/ `params` \u662f\u5373\u5c06\u4e0e\u8bf7\u6c42\u4e00\u8d77\u53d1\u9001\u7684 URL \u53c2\u6570\n  \/\/ \u5fc5\u987b\u662f\u4e00\u4e2a\u65e0\u683c\u5f0f\u5bf9\u8c61(plain object)\u6216 URLSearchParams \u5bf9\u8c61\n  params: {\n    ID: 12345\n  },\n\n  \/\/ `paramsSerializer` \u662f\u4e00\u4e2a\u8d1f\u8d23 `params` \u5e8f\u5217\u5316\u7684\u51fd\u6570\n  \/\/ (e.g. https:\/\/www.npmjs.com\/package\/qs, http:\/\/api.jquery.com\/jquery.param\/)\n  paramsSerializer: function(params) {\n    return Qs.stringify(params, {arrayFormat: 'brackets'})\n  },\n\n  \/\/ `data` \u662f\u4f5c\u4e3a\u8bf7\u6c42\u4e3b\u4f53\u88ab\u53d1\u9001\u7684\u6570\u636e\n  \/\/ \u53ea\u9002\u7528\u4e8e\u8fd9\u4e9b\u8bf7\u6c42\u65b9\u6cd5 'PUT', 'POST', \u548c 'PATCH'\n  \/\/ \u5728\u6ca1\u6709\u8bbe\u7f6e `transformRequest` \u65f6\uff0c\u5fc5\u987b\u662f\u4ee5\u4e0b\u7c7b\u578b\u4e4b\u4e00\uff1a\n  \/\/ - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams\n  \/\/ - \u6d4f\u89c8\u5668\u4e13\u5c5e\uff1aFormData, File, Blob\n  \/\/ - Node \u4e13\u5c5e\uff1a Stream\n  data: {\n    firstName: 'Fred'\n  },\n\n  \/\/ `timeout` \u6307\u5b9a\u8bf7\u6c42\u8d85\u65f6\u7684\u6beb\u79d2\u6570(0 \u8868\u793a\u65e0\u8d85\u65f6\u65f6\u95f4)\n  \/\/ \u5982\u679c\u8bf7\u6c42\u8bdd\u8d39\u4e86\u8d85\u8fc7 `timeout` \u7684\u65f6\u95f4\uff0c\u8bf7\u6c42\u5c06\u88ab\u4e2d\u65ad\n  timeout: 1000,\n\n  \/\/ `withCredentials` \u8868\u793a\u8de8\u57df\u8bf7\u6c42\u65f6\u662f\u5426\u9700\u8981\u4f7f\u7528\u51ed\u8bc1\n  withCredentials: false, \/\/ \u9ed8\u8ba4\u7684\n\n  \/\/ `adapter` \u5141\u8bb8\u81ea\u5b9a\u4e49\u5904\u7406\u8bf7\u6c42\uff0c\u4ee5\u4f7f\u6d4b\u8bd5\u66f4\u8f7b\u677e\n  \/\/ \u8fd4\u56de\u4e00\u4e2a promise \u5e76\u5e94\u7528\u4e00\u4e2a\u6709\u6548\u7684\u54cd\u5e94 (\u67e5\u9605 [response docs](#response-api)).\n  adapter: function (config) {\n    \/* ... *\/\n  },\n\n  \/\/ `auth` \u8868\u793a\u5e94\u8be5\u4f7f\u7528 HTTP \u57fa\u7840\u9a8c\u8bc1\uff0c\u5e76\u63d0\u4f9b\u51ed\u636e\n  \/\/ \u8fd9\u5c06\u8bbe\u7f6e\u4e00\u4e2a `Authorization` \u5934\uff0c\u8986\u5199\u6389\u73b0\u6709\u7684\u4efb\u610f\u4f7f\u7528 `headers` \u8bbe\u7f6e\u7684\u81ea\u5b9a\u4e49 `Authorization`\u5934\n  auth: {\n    username: 'janedoe',\n    password: 's00pers3cret'\n  },\n\n  \/\/ `responseType` \u8868\u793a\u670d\u52a1\u5668\u54cd\u5e94\u7684\u6570\u636e\u7c7b\u578b\uff0c\u53ef\u4ee5\u662f 'arraybuffer', 'blob', 'document', 'json', 'text', 'stream'\n  responseType: 'json', \/\/ \u9ed8\u8ba4\u7684\n\n  \/\/ `xsrfCookieName` \u662f\u7528\u4f5c xsrf token \u7684\u503c\u7684cookie\u7684\u540d\u79f0\n  xsrfCookieName: 'XSRF-TOKEN', \/\/ default\n\n  \/\/ `xsrfHeaderName` \u662f\u627f\u8f7d xsrf token \u7684\u503c\u7684 HTTP \u5934\u7684\u540d\u79f0\n  xsrfHeaderName: 'X-XSRF-TOKEN', \/\/ \u9ed8\u8ba4\u7684\n\n  \/\/ `onUploadProgress` \u5141\u8bb8\u4e3a\u4e0a\u4f20\u5904\u7406\u8fdb\u5ea6\u4e8b\u4ef6\n  onUploadProgress: function (progressEvent) {\n    \/\/ \u5bf9\u539f\u751f\u8fdb\u5ea6\u4e8b\u4ef6\u7684\u5904\u7406\n  },\n\n  \/\/ `onDownloadProgress` \u5141\u8bb8\u4e3a\u4e0b\u8f7d\u5904\u7406\u8fdb\u5ea6\u4e8b\u4ef6\n  onDownloadProgress: function (progressEvent) {\n    \/\/ \u5bf9\u539f\u751f\u8fdb\u5ea6\u4e8b\u4ef6\u7684\u5904\u7406\n  },\n\n  \/\/ `maxContentLength` \u5b9a\u4e49\u5141\u8bb8\u7684\u54cd\u5e94\u5185\u5bb9\u7684\u6700\u5927\u5c3a\u5bf8\n  maxContentLength: 2000,\n\n  \/\/ `validateStatus` \u5b9a\u4e49\u5bf9\u4e8e\u7ed9\u5b9a\u7684HTTP \u54cd\u5e94\u72b6\u6001\u7801\u662f resolve \u6216 reject  promise \u3002\u5982\u679c `validateStatus` \u8fd4\u56de `true` (\u6216\u8005\u8bbe\u7f6e\u4e3a `null` \u6216 `undefined`)\uff0cpromise \u5c06\u88ab resolve; \u5426\u5219\uff0cpromise \u5c06\u88ab rejecte\n  validateStatus: function (status) {\n    return status >= 200 && status < 300; \/\/ \u9ed8\u8ba4\u7684\n  },\n\n  \/\/ `maxRedirects` \u5b9a\u4e49\u5728 node.js \u4e2d follow \u7684\u6700\u5927\u91cd\u5b9a\u5411\u6570\u76ee\n  \/\/ \u5982\u679c\u8bbe\u7f6e\u4e3a0\uff0c\u5c06\u4e0d\u4f1a follow \u4efb\u4f55\u91cd\u5b9a\u5411\n  maxRedirects: 5, \/\/ \u9ed8\u8ba4\u7684\n\n  \/\/ `httpAgent` \u548c `httpsAgent` \u5206\u522b\u5728 node.js \u4e2d\u7528\u4e8e\u5b9a\u4e49\u5728\u6267\u884c http \u548c https \u65f6\u4f7f\u7528\u7684\u81ea\u5b9a\u4e49\u4ee3\u7406\u3002\u5141\u8bb8\u50cf\u8fd9\u6837\u914d\u7f6e\u9009\u9879\uff1a\n  \/\/ `keepAlive` \u9ed8\u8ba4\u6ca1\u6709\u542f\u7528\n  httpAgent: new http.Agent({ keepAlive: true }),\n  httpsAgent: new https.Agent({ keepAlive: true }),\n\n  \/\/ 'proxy' \u5b9a\u4e49\u4ee3\u7406\u670d\u52a1\u5668\u7684\u4e3b\u673a\u540d\u79f0\u548c\u7aef\u53e3\n  \/\/ `auth` \u8868\u793a HTTP \u57fa\u7840\u9a8c\u8bc1\u5e94\u5f53\u7528\u4e8e\u8fde\u63a5\u4ee3\u7406\uff0c\u5e76\u63d0\u4f9b\u51ed\u636e\n  \/\/ \u8fd9\u5c06\u4f1a\u8bbe\u7f6e\u4e00\u4e2a `Proxy-Authorization` \u5934\uff0c\u8986\u5199\u6389\u5df2\u6709\u7684\u901a\u8fc7\u4f7f\u7528 `header` \u8bbe\u7f6e\u7684\u81ea\u5b9a\u4e49 `Proxy-Authorization` \u5934\u3002\n  proxy: {\n    host: '127.0.0.1',\n    port: 9000,\n    auth: : {\n      username: 'mikeymike',\n      password: 'rapunz3l'\n    }\n  },\n\n  \/\/ `cancelToken` \u6307\u5b9a\u7528\u4e8e\u53d6\u6d88\u8bf7\u6c42\u7684 cancel token\n  \/\/ \uff08\u67e5\u770b\u540e\u9762\u7684 Cancellation \u8fd9\u8282\u4e86\u89e3\u66f4\u591a\uff09\n  cancelToken: new CancelToken(function (cancel) {\n  })\n}\n```\n\n## \u54cd\u5e94\u7ed3\u6784\n\n\u67d0\u4e2a\u8bf7\u6c42\u7684\u54cd\u5e94\u5305\u542b\u4ee5\u4e0b\u4fe1\u606f\n\n```js\n{\n  \/\/ `data` \u7531\u670d\u52a1\u5668\u63d0\u4f9b\u7684\u54cd\u5e94\n  data: {},\n\n  \/\/ `status` \u6765\u81ea\u670d\u52a1\u5668\u54cd\u5e94\u7684 HTTP \u72b6\u6001\u7801\n  status: 200,\n\n  \/\/ `statusText` \u6765\u81ea\u670d\u52a1\u5668\u54cd\u5e94\u7684 HTTP \u72b6\u6001\u4fe1\u606f\n  statusText: 'OK',\n\n  \/\/ `headers` \u670d\u52a1\u5668\u54cd\u5e94\u7684\u5934\n  headers: {},\n\n  \/\/ `config` \u662f\u4e3a\u8bf7\u6c42\u63d0\u4f9b\u7684\u914d\u7f6e\u4fe1\u606f\n  config: {}\n}\n```\n\n\u4f7f\u7528 `then` \u65f6\uff0c\u4f60\u5c06\u63a5\u6536\u4e0b\u9762\u8fd9\u6837\u7684\u54cd\u5e94\uff1a\n\n```js\naxios.get('\/user\/12345')\n  .then(function(response) {\n    console.log(response.data);\n    console.log(response.status);\n    console.log(response.statusText);\n    console.log(response.headers);\n    console.log(response.config);\n  });\n```\n\n\u5728\u4f7f\u7528 `catch` \u65f6\uff0c\u6216\u4f20\u9012 [rejection callback](https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/JavaScript\/Reference\/Global_Objects\/Promise\/then) \u4f5c\u4e3a `then` \u7684\u7b2c\u4e8c\u4e2a\u53c2\u6570\u65f6\uff0c\u54cd\u5e94\u53ef\u4ee5\u901a\u8fc7 `error` \u5bf9\u8c61\u53ef\u88ab\u4f7f\u7528\uff0c\u6b63\u5982\u5728[\u9519\u8bef\u5904\u7406](#handling-errors)\u8fd9\u4e00\u8282\u6240\u8bb2\u3002\n\n## \u914d\u7f6e\u7684\u9ed8\u8ba4\u503c\/defaults\n\n\u4f60\u53ef\u4ee5\u6307\u5b9a\u5c06\u88ab\u7528\u5728\u5404\u4e2a\u8bf7\u6c42\u7684\u914d\u7f6e\u9ed8\u8ba4\u503c\n\n### \u5168\u5c40\u7684 axios \u9ed8\u8ba4\u503c\n\n```js\naxios.defaults.baseURL = 'https:\/\/api.example.com';\naxios.defaults.headers.common['Authorization'] = AUTH_TOKEN;\naxios.defaults.headers.post['Content-Type'] = 'application\/x-www-form-urlencoded';\n```\n\n### \u81ea\u5b9a\u4e49\u5b9e\u4f8b\u9ed8\u8ba4\u503c\n\n```js\n\/\/ \u521b\u5efa\u5b9e\u4f8b\u65f6\u8bbe\u7f6e\u914d\u7f6e\u7684\u9ed8\u8ba4\u503c\nvar instance = axios.create({\n  baseURL: 'https:\/\/api.example.com'\n});\n\n\/\/ \u5728\u5b9e\u4f8b\u5df2\u521b\u5efa\u540e\u4fee\u6539\u9ed8\u8ba4\u503c\ninstance.defaults.headers.common['Authorization'] = AUTH_TOKEN;\n```\n\n### \u914d\u7f6e\u7684\u4f18\u5148\u987a\u5e8f\n\n\u914d\u7f6e\u4f1a\u4ee5\u4e00\u4e2a\u4f18\u5148\u987a\u5e8f\u8fdb\u884c\u5408\u5e76\u3002\u8fd9\u4e2a\u987a\u5e8f\u662f\uff1a\u5728 `lib\/defaults.js` \u627e\u5230\u7684\u5e93\u7684\u9ed8\u8ba4\u503c\uff0c\u7136\u540e\u662f\u5b9e\u4f8b\u7684 `defaults` \u5c5e\u6027\uff0c\u6700\u540e\u662f\u8bf7\u6c42\u7684 `config` \u53c2\u6570\u3002\u540e\u8005\u5c06\u4f18\u5148\u4e8e\u524d\u8005\u3002\u8fd9\u91cc\u662f\u4e00\u4e2a\u4f8b\u5b50\uff1a\n\n```js\n\/\/ \u4f7f\u7528\u7531\u5e93\u63d0\u4f9b\u7684\u914d\u7f6e\u7684\u9ed8\u8ba4\u503c\u6765\u521b\u5efa\u5b9e\u4f8b\n\/\/ \u6b64\u65f6\u8d85\u65f6\u914d\u7f6e\u7684\u9ed8\u8ba4\u503c\u662f `0`\nvar instance = axios.create();\n\n\/\/ \u8986\u5199\u5e93\u7684\u8d85\u65f6\u9ed8\u8ba4\u503c\n\/\/ \u73b0\u5728\uff0c\u5728\u8d85\u65f6\u524d\uff0c\u6240\u6709\u8bf7\u6c42\u90fd\u4f1a\u7b49\u5f85 2.5 \u79d2\ninstance.defaults.timeout = 2500;\n\n\/\/ \u4e3a\u5df2\u77e5\u9700\u8981\u82b1\u8d39\u5f88\u957f\u65f6\u95f4\u7684\u8bf7\u6c42\u8986\u5199\u8d85\u65f6\u8bbe\u7f6e\ninstance.get('\/longRequest', {\n  timeout: 5000\n});\n```\n\n## \u62e6\u622a\u5668\n\n\u5728\u8bf7\u6c42\u6216\u54cd\u5e94\u88ab `then` \u6216 `catch` \u5904\u7406\u524d\u62e6\u622a\u5b83\u4eec\u3002\n\n```js\n\/\/ \u6dfb\u52a0\u8bf7\u6c42\u62e6\u622a\u5668\naxios.interceptors.request.use(function (config) {\n    \/\/ \u5728\u53d1\u9001\u8bf7\u6c42\u4e4b\u524d\u505a\u4e9b\u4ec0\u4e48\n    return config;\n  }, function (error) {\n    \/\/ \u5bf9\u8bf7\u6c42\u9519\u8bef\u505a\u4e9b\u4ec0\u4e48\n    return Promise.reject(error);\n  });\n\n\/\/ \u6dfb\u52a0\u54cd\u5e94\u62e6\u622a\u5668\naxios.interceptors.response.use(function (response) {\n    \/\/ \u5bf9\u54cd\u5e94\u6570\u636e\u505a\u70b9\u4ec0\u4e48\n    return response;\n  }, function (error) {\n    \/\/ \u5bf9\u54cd\u5e94\u9519\u8bef\u505a\u70b9\u4ec0\u4e48\n    return Promise.reject(error);\n  });\n```\n\n\u5982\u679c\u4f60\u60f3\u5728\u7a0d\u540e\u79fb\u9664\u62e6\u622a\u5668\uff0c\u53ef\u4ee5\u8fd9\u6837\uff1a\n\n```js\nvar myInterceptor = axios.interceptors.request.use(function () {\/*...*\/});\naxios.interceptors.request.eject(myInterceptor);\n```\n\n\u53ef\u4ee5\u4e3a\u81ea\u5b9a\u4e49 axios \u5b9e\u4f8b\u6dfb\u52a0\u62e6\u622a\u5668\n\n```js\nvar instance = axios.create();\ninstance.interceptors.request.use(function () {\/*...*\/});\n```\n\n## \u9519\u8bef\u5904\u7406\n\n```js\naxios.get('\/user\/12345')\n  .catch(function (error) {\n    if (error.response) {\n      \/\/ \u8bf7\u6c42\u5df2\u53d1\u51fa\uff0c\u4f46\u670d\u52a1\u5668\u54cd\u5e94\u7684\u72b6\u6001\u7801\u4e0d\u5728 2xx \u8303\u56f4\u5185\n      console.log(error.response.data);\n      console.log(error.response.status);\n      console.log(error.response.headers);\n    } else {\n      \/\/ Something happened in setting up the request that triggered an Error\n      console.log('Error', error.message);\n    }\n    console.log(error.config);\n  });\n```\n\n\u53ef\u4ee5\u4f7f\u7528 `validateStatus` \u914d\u7f6e\u9009\u9879\u5b9a\u4e49\u4e00\u4e2a\u81ea\u5b9a\u4e49 HTTP \u72b6\u6001\u7801\u7684\u9519\u8bef\u8303\u56f4\u3002\n\n```js\naxios.get('\/user\/12345', {\n  validateStatus: function (status) {\n    return status < 500; \/\/ \u72b6\u6001\u7801\u5728\u5927\u4e8e\u6216\u7b49\u4e8e500\u65f6\u624d\u4f1a reject\n  }\n})\n```\n\n## \u53d6\u6d88\n\n\u4f7f\u7528 *cancel token* \u53d6\u6d88\u8bf7\u6c42\n\n> Axios \u7684 cancel token API \u57fa\u4e8e[cancelable promises proposal](https:\/\/github.com\/tc39\/proposal-cancelable-promises)\uff0c\u5b83\u8fd8\u5904\u4e8e\u7b2c\u4e00\u9636\u6bb5\u3002\n\n\u53ef\u4ee5\u4f7f\u7528 `CancelToken.source` \u5de5\u5382\u65b9\u6cd5\u521b\u5efa cancel token\uff0c\u50cf\u8fd9\u6837\uff1a\n\n```js\nvar CancelToken = axios.CancelToken;\nvar source = CancelToken.source();\n\naxios.get('\/user\/12345', {\n  cancelToken: source.token\n}).catch(function(thrown) {\n  if (axios.isCancel(thrown)) {\n    console.log('Request canceled', thrown.message);\n  } else {\n    \/\/ \u5904\u7406\u9519\u8bef\n  }\n});\n\n\/\/ \u53d6\u6d88\u8bf7\u6c42\uff08message \u53c2\u6570\u662f\u53ef\u9009\u7684\uff09\nsource.cancel('Operation canceled by the user.');\n```\n\n\u8fd8\u53ef\u4ee5\u901a\u8fc7\u4f20\u9012\u4e00\u4e2a executor \u51fd\u6570\u5230 `CancelToken` \u7684\u6784\u9020\u51fd\u6570\u6765\u521b\u5efa cancel token\uff1a\n\n```js\nvar CancelToken = axios.CancelToken;\nvar cancel;\n\naxios.get('\/user\/12345', {\n  cancelToken: new CancelToken(function executor(c) {\n    \/\/ executor \u51fd\u6570\u63a5\u6536\u4e00\u4e2a cancel \u51fd\u6570\u4f5c\u4e3a\u53c2\u6570\n    cancel = c;\n  })\n});\n\n\/\/ \u53d6\u6d88\u8bf7\u6c42\ncancel();\n```\n\nNote : \u53ef\u4ee5\u4f7f\u7528\u540c\u4e00\u4e2a cancel token \u53d6\u6d88\u591a\u4e2a\u8bf7\u6c42\n\n## Semver\n\nUntil axios reaches a `1.0` release, breaking changes will be released with a new minor version. For example `0.5.1`, and `0.5.4` will have the same API, but `0.6.0` will have breaking changes.\n\n## Promises\n\naxios \u4f9d\u8d56\u539f\u751f\u7684 ES6 Promise \u5b9e\u73b0\u800c[\u88ab\u652f\u6301](http:\/\/caniuse.com\/promises).\n\u5982\u679c\u4f60\u7684\u73af\u5883\u4e0d\u652f\u6301 ES6 Promise\uff0c\u4f60\u53ef\u4ee5\u4f7f\u7528 [polyfill](https:\/\/github.com\/jakearchibald\/es6-promise).\n\n## TypeScript\naxios includes [TypeScript](http:\/\/typescriptlang.org) definitions.\n```typescript\nimport axios from 'axios';\naxios.get('\/user?ID=12345');\n```\n\n## Resources\n\n* [Changelog](https:\/\/github.com\/mzabriskie\/axios\/blob\/master\/CHANGELOG.md)\n* [Upgrade Guide](https:\/\/github.com\/mzabriskie\/axios\/blob\/master\/UPGRADE_GUIDE.md)\n* [Ecosystem](https:\/\/github.com\/mzabriskie\/axios\/blob\/master\/ECOSYSTEM.md)\n* [Contributing Guide](https:\/\/github.com\/mzabriskie\/axios\/blob\/master\/CONTRIBUTING.md)\n* [Code of Conduct](https:\/\/github.com\/mzabriskie\/axios\/blob\/master\/CODE_OF_CONDUCT.md)\n\n## Credits\n\naxios is heavily inspired by the [$http service](https:\/\/docs.angularjs.org\/api\/ng\/service\/$http) provided in [Angular](https:\/\/angularjs.org\/). Ultimately axios is an effort to provide a standalone `$http`-like service for use outside of Angular.\n\n## License\n\nMIT\n","sort":1,"comment":1,"is_probation":0,"create_time":{"date":"2016-11-17 14:24:44.000000","timezone_type":3,"timezone":"PRC"},"update_time":{"date":"2016-11-17 14:24:44.000000","timezone_type":3,"timezone":"PRC"}},
+        "options":{"plugins_host":"https:\/\/plugins.kancloud.cn\/","context":"website","base":"\/yunye\/axios\/","features":["comment","search","internal_link"]},
+        "style":""
+    }
+</script>
+<script type="text/javascript" src="./使用说明 · Axios 中文说明 · 看云_files/reader.js.下载"></script>
+<script type="text/javascript">
+    kancloud.bootstrap();
+</script>
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l      = +new Date;
+        ga('create', 'UA-85687835-1', 'auto', 'web');
+        ga('set', 'transport', 'beacon');
+        
+                ga('web.send', 'pageview', {
+            dimension1:26419
+        });
+            </script>
+    <script async="" src="./使用说明 · Axios 中文说明 · 看云_files/analytics.js.下载"></script>
+    <!-- End Google Analytics -->
+
+<audio controls="controls" style="display: none;"></audio></body><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></html>

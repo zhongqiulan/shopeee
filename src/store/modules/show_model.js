@@ -1,6 +1,7 @@
 const state = {
     // table2弹出框
-    show:false
+    show:false,
+    orderList: [{ orderno: '1111' }], //订单列表
  }
  const mutations = {
     switch_dialog(state){//这里的state对应着上面这个state

@@ -43,6 +43,8 @@ const game = () => import("../test/game")
 const table4= () => import("../test/table4")
 const upload= () => import("../test/upload")
 const form= () => import("../form/form")
+const form1= () => import("../form/form1")
+const form2= () => import("../form/form2")
 const vuex1= () => import("../form/vuex1")
 const select= () => import("../form/select")
 
@@ -63,6 +65,8 @@ const router = new VueRouter({
         { path:'/appbus',component:appbus},
         { path:'/upload',component:upload},
         { path:'/form',component:form},
+        { path:'/form1',component:form1},
+        { path:'/form2',component:form2},
         { path:'/vuex1',component:vuex1},
         { path:'/select',component:select},
         //==================华丽的分隔线，下面都是需要先判断是否登录的

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>图片预览</h2>
+    <!-- 牵扯到图片上传 -->
+    <!-- 选择图片 -->
+    <input type="file">
+    <br>
+    <!-- 预览图片 -->
+    <img src="" alt="">
+</body>
+</html>
+<script>
+    /*
+        用户选择了图片
+        改变事件 onchange
+        value值改变
+
+        HTML5中的新 api 
+        MDN
+        URL.createObjectURL
+            知道了功能
+            知道了语法
+            跑一下试试
+            可以 
+                用起来
+            不可以
+                看看是不是写错了
+            
+        
+    */ 
+    // dom的语法 绑定事件
+    document.querySelector('input').onchange = function(){
+        // console.log('改变啦');
+
+        // 通过input 获取file
+        var file = this.files[0];
+        console.log(file)
+
+        // 通过URL.createObjectURL 生成url
+        var url = URL.createObjectURL(file);
+        console.log(url)
+
+        // 有了 URL 给IMG
+        document.querySelector('img').src = url;
+    }
+
+    // jQuery 调用change方法时 内部会有兼容性处理 等一些其他的判断
+    // $('input').change(function(){})
+
+</script>

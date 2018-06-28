@@ -2,7 +2,8 @@
   <div id="app">
     
    <div id="crRelease">
-      <aPage ></aPage>
+      <!-- <aPage style="height:30px;width:500px" ></aPage> -->
+      <v-center></v-center>
       6
     1111111111111
     <bPage ></bPage>
@@ -14,7 +15,7 @@
 </template>
 
 <script>
-import aPage from "./a.vue";
+import center from "./center.vue";
 import bPage from "./b.vue";
 import crRelease from "./crRelease.vue";
 
@@ -26,7 +27,7 @@ export default {
   },
   name: "app",
   components: {
-    aPage,
+    center:vCenter,
     bPage,
     crRelease
   },

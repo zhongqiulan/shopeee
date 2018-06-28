@@ -14,7 +14,7 @@
                 
                 <el-upload 
                 action="" 
-               :http-request="httprequest" 
+               
                 :multiple="false" 
                 :limit="1" 
                 :on-change = 'handleChange'
@@ -36,46 +36,44 @@ export default {
   data() {
     return {
       form: {
-        name: "",
-        region: ""
+        name: '',
+        region: ''
       },
       fileList: []
-    };
+    }
   },
   methods: {
-       //覆盖默认的上传行为
-            httprequest() {
-
-            },
     handleChange(file, fileList) {
-      this.fileList = fileList;
+      this.fileList = fileList
     },
     handleExceed(files, fileList) {
-      this.$message.warning(`最多上传 ${files.length} 个文件`);
+      this.$message.warning(`最多上传 ${files.length} 个文件`)
     },
-
-    onSubmit() {
-      let form = this.$refs["form"].$el;
-      let formData = new FormData(form);
-      formData.append("name", this.form.name);
-      formData.append("region", this.form.region);
-      formData.append("file", this.fileList[0]);
-      let config = {
-        headers: {
-          "Content-Type": "multipart/form-data"
+  
+      onSubmit() {
+        let form = this.$refs['form'].$el
+        let formData = new FormData(form)
+        formData.append('name', this.form.name)
+        formData.append('region', this.form.region)
+        formData.append('file', this.fileList[0])
+        let config = {
+              headers: {
+                'Content-Type': 'multipart/form-data'
+              }
+            }
+        this.$axios
+            .$post('/api/active', formData,config)
+            .then(response => {
+            if (response.code === 200) {
+                // 提交成功将要执行的代码
+            }
+            })
+            .catch(function(error) {
+            // console.log(error)
+            })
         }
-      };
-      this.$axios
-        .$post("/api/active", formData, config)
-        .then(response => {
-          if (response.code === 200) {
-            // 提交成功将要执行的代码
-          }
-        })
-        .catch(function(error) {
-          // console.log(error)
-        });
     }
   }
-};
+
+
 </script>

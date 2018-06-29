@@ -16,7 +16,7 @@
                 action="" 
                :http-request="httprequest" 
                 :multiple="false" 
-                :limit="1" 
+                :limit="3" 
                 :on-change = 'handleChange'
                 :on-exceed="handleExceed" 
                 :file-list="fileList">
@@ -32,6 +32,7 @@
     </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -43,37 +44,37 @@ export default {
     };
   },
   methods: {
-       //覆盖默认的上传行为
-            httprequest() {
-
-            },
+    //覆盖默认的上传行为
+    httprequest() {},
     handleChange(file, fileList) {
       this.fileList = fileList;
+      console.log(this.fileList);
     },
     handleExceed(files, fileList) {
-      this.$message.warning(`最多上传 ${files.length} 个文件`);
+      console.log(files)
+      this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
     },
 
     onSubmit() {
-      let form = this.$refs["form"].$el;
-      let formData = new FormData(form);
+      let formData = new FormData();
       formData.append("name", this.form.name);
       formData.append("region", this.form.region);
-      formData.append("file", this.fileList[0]);
+      formData.append("file[]", this.fileList);
+      // console.log(formData.get('file')) // FormData私有类对象，访问不到，可以通过get判断值是否传进去
       let config = {
         headers: {
           "Content-Type": "multipart/form-data"
         }
       };
-      this.$axios
-        .$post("/api/active", formData, config)
+  
+      // 添加请求头
+      axios
+        .post("http://172.19.26.60:8081/rest/user/headurl", formData, config)
         .then(response => {
-          if (response.code === 200) {
-            // 提交成功将要执行的代码
+          if (response.data.code === 0) {
+            self.ImgUrl = response.data.data;
           }
-        })
-        .catch(function(error) {
-          // console.log(error)
+          console.log(response.data);
         });
     }
   }

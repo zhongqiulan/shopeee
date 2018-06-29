@@ -34,35 +34,37 @@
 </template>
 
 <script>
-    //按需导入bus
-    import { bus } from '../../common/commonvue'
+//按需导入bus
+import { bus } from "../../common/commonvue";
+import axios from "axios";
+export default {
+  data() {
+    return {
+      user_name: "zhangsan",
+      password: "123"
+    };
+  },
+  methods: {
+    login() {
+      const url = `site/account/login`;
 
-    export default {
-        data() {
-            return {
-                user_name: 'zhangsan',
-                password: '123'
-            }
-        },
-        methods: {
-            login() {
-                const url = `site/account/login`
+      this.$axios
+        .post(url, { user_name: this.user_name, password: this.password })
+        .then(res => {
+          if (res.data.status == 1) {
+            this.$message.error(res.data.message);
 
-                this.$axios.post(url, { user_name: this.user_name, password: this.password }).then(res => {
-                    if (res.data.status == 1) {
-                        this.$message.error(res.data.message);
+            //通过公共bus，触发事件，传递载荷
+            bus.$emit("isLogin", false);
+          } else {
+            //通过公共bus，触发事件，传递载荷
+            bus.$emit("isLogin", true);
 
-                        //通过公共bus，触发事件，传递载荷
-                        bus.$emit('isLogin', false)
-                    } else {
-                        //通过公共bus，触发事件，传递载荷
-                        bus.$emit('isLogin', true)
-
-                        //登录成功之后，跳转到目标组件
-                        this.$router.push({ path: localStorage.getItem('lastVisitPath') })
-                    }
-                })
-            }
-        }
+            //登录成功之后，跳转到目标组件
+            this.$router.push({ path: localStorage.getItem("lastVisitPath") });
+          }
+        });
     }
+  }
+};
 </script>

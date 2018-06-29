@@ -192,7 +192,7 @@
 
 <script>
     import "../../statics/site/js/jqueryplugins/jqimgzoom/js/magnifier.js"
-
+import axios from "axios";
     //按需导入iview的图钉组件
     import { Affix } from 'iview';
 

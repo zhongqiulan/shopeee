@@ -18,6 +18,7 @@
 </style>
 
 <script>
+import axios from "axios";
     export default {
         props:['goodsId','goodsNumber'],
         data(){

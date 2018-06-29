@@ -89,7 +89,7 @@
 <script>
     //导入二维码插件
     import ".././../statics/site/js/jqueryplugins/qrcode/js/jqueryqr"
-
+import axios from "axios";
     export default{
         data(){
             return {

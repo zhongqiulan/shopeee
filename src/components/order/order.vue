@@ -169,7 +169,7 @@
 
 <script>
     import VDistpicker from 'v-distpicker'
-
+import axios from "axios";
     import { getLocalGoods } from '../../common/localStorageTool'
 
     export default {

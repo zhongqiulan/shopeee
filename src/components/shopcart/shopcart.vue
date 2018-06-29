@@ -113,146 +113,163 @@
 </template>
 
 <style scoped>
-    img {
-        width: 30px;
-        height: 30px;
-    }
+img {
+  width: 30px;
+  height: 30px;
+}
 </style>
 
 <script>
-    import { getLocalGoods } from '../../common/localStorageTool'
+import { getLocalGoods } from "../../common/localStorageTool";
 
-    //导入子组件
-    import inputnumber from '../subcomponents/inputnumber'
-
-    export default {
-        components: {
-            inputnumber
-        },
-        data() {
-            return {
-                goodsList: []
-            }
-        },
-        created() {
-            this.getGoodsListData()
-
-        },
-        computed: {
-            getTotalCount() {
-                let totalCount = 0
-                this.goodsList.forEach(item => {
-                    if (item.isSelected) {
-                        totalCount += item.buycount
-                    }
-                })
-
-                return totalCount
-            },
-            getTotalAmount() {
-                let totalAmount = 0
-
-                this.goodsList.forEach(item => {
-                    if (item.isSelected) {
-                        totalAmount += item.buycount * item.sell_price
-                    }
-                })
-
-                return totalAmount
-            }
-        },
-        methods: {
-            //获取购物车需要展示的数组
-            getGoodsListData() {
-                //1.获取保存到本地的对象 {"90":5,"93":6}
-                const localGoods = getLocalGoods()
-
-                //2.声明一个临时的数组
-                const tempArray = []
-                for (const key in localGoods) {
-                    tempArray.push(key)
-                }
-
-                if (tempArray.length == 0) return
-
-                //3.准备好url
-                const url = `site/comment/getshopcargoods/${tempArray.join(',')}`
-                this.$axios.get(url).then(res => {
-                    res.data.message.forEach(item => {
-                        item.isSelected = true
-                        item.buycount = localGoods[item.id]
-                    })
-
-                    this.goodsList = res.data.message
-                }).catch(err => {
-                    console.log(err)
-                })
-            },
-            //获取子组件传递过来的值
-            /**
-             * goods ===> 子组件传递过来的格式是
-             * {
-             *  goodsId:87,
-             *  goodsNumber:3
-             * }
-            */
-            getChangeNumber(goods) {
-                //更改自己的数组，然后重新计算
-                this.goodsList.forEach(item => {
-                    if (item.id == goods.goodsId) {
-                        item.buycount = goods.goodsNumber
-                    }
-                })
-
-                //调用Vuex中的Mutations的updateGoods
-                this.$store.commit('UPDATE_GOODS', {
-                    goodsId: goods.goodsId,
-                    count: goods.goodsNumber
-                })
-            },
-            //根据id删除某个商品
-            deleteGoodsById(goodsId) {
-                this.$confirm('是否删除该商品?', '提示', {
-                    confirmButtonText: '确定',
-                    cancelButtonText: '取消',
-                    type: 'warning'
-                }).then(() => {
-                    //1.先把该goods对象的索引的元素干掉
-                    const deleteIndex = this.goodsList.findIndex(item=>{
-                        return item.id === goodsId
-                    })
-
-                    this.goodsList.splice(deleteIndex,1)
-
-                    //2.调用Vuex的方法
-                    this.$store.commit('deleteGoodsById',goodsId)
-                }).catch(() => {
-                    console.log("取消")
-                });
-            },
-            //去下单
-            goToOrder(){
-                const tempArray = []
-                
-                this.goodsList.forEach(item=>{
-                    if(item.isSelected){
-                        tempArray.push(item.id)
-                    }
-                })
-
-                if(tempArray.length == 0){
-                    this.$message.error('请至少选择一个商品进行结算!');
-                    return
-                }
-
-                //通过编程式导航触发路由
-                this.$router.push({path:`/order/${tempArray.join(',')}`})
-            },
-            //继续购物
-            continueBuy(){
-                //通过编程式导航触发路由
-                this.$router.push({path:'/goodslist'})
-            }
+//导入子组件
+import inputnumber from "../subcomponents/inputnumber";
+import axios from "axios";
+export default {
+  components: {
+    inputnumber
+  },
+  data() {
+    return {
+      goodsList: []
+    };
+  },
+  created() {
+    this.getGoodsListData();
+  },
+  computed: {
+    getTotalCount() {
+      let totalCount = 0;
+      this.goodsList.forEach(item => {
+        if (item.isSelected) {
+          totalCount += item.buycount;
         }
+      });
+
+      return totalCount;
+    },
+    getTotalAmount() {
+      let totalAmount = 0;
+
+      this.goodsList.forEach(item => {
+        if (item.isSelected) {
+          totalAmount += item.buycount * item.sell_price;
+        }
+      });
+
+      return totalAmount;
     }
+  },
+  methods: {
+    //获取购物车需要展示的数组
+    getGoodsListData() {
+      //1.获取保存到本地的对象 {"90":5,"93":6}
+      const localGoods = getLocalGoods();
+
+      //2.声明一个临时的数组
+      const tempArray = [];
+      for (const key in localGoods) {
+        tempArray.push(key);
+      }
+
+      if (tempArray.length == 0) return;
+
+      //3.准备好url
+      const url = `site/comment/getshopcargoods/${tempArray.join(",")}`;
+    //   this.$axios
+    //     .get(url)
+    //     .then(res => {
+    //       res.data.message.forEach(item => {
+    //         item.isSelected = true;
+    //         item.buycount = localGoods[item.id];
+    //       });
+
+    //       this.goodsList = res.data.message;
+    //     })
+    //     .catch(err => {
+    //       console.log(err);
+    //     });
+
+       axios({
+        url: `http://127.0.0.1:8890/site/comment/getshopcargoods/${tempArray.join(",")}`,
+        method: 'get',
+        // data: formdata,
+        headers: {'Content-Type': 'multipart/form-data'},
+    }).then(function (re) {
+        console.log('111111111')
+        console.log(re);
+        })
+        .catch(function (err) {
+            console.log(err);
+        })
+    },
+    //获取子组件传递过来的值
+    /**
+     * goods ===> 子组件传递过来的格式是
+     * {
+     *  goodsId:87,
+     *  goodsNumber:3
+     * }
+     */
+    getChangeNumber(goods) {
+      //更改自己的数组，然后重新计算
+      this.goodsList.forEach(item => {
+        if (item.id == goods.goodsId) {
+          item.buycount = goods.goodsNumber;
+        }
+      });
+
+      //调用Vuex中的Mutations的updateGoods
+      this.$store.commit("UPDATE_GOODS", {
+        goodsId: goods.goodsId,
+        count: goods.goodsNumber
+      });
+    },
+    //根据id删除某个商品
+    deleteGoodsById(goodsId) {
+      this.$confirm("是否删除该商品?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          //1.先把该goods对象的索引的元素干掉
+          const deleteIndex = this.goodsList.findIndex(item => {
+            return item.id === goodsId;
+          });
+
+          this.goodsList.splice(deleteIndex, 1);
+
+          //2.调用Vuex的方法
+          this.$store.commit("deleteGoodsById", goodsId);
+        })
+        .catch(() => {
+          console.log("取消");
+        });
+    },
+    //去下单
+    goToOrder() {
+      const tempArray = [];
+
+      this.goodsList.forEach(item => {
+        if (item.isSelected) {
+          tempArray.push(item.id);
+        }
+      });
+
+      if (tempArray.length == 0) {
+        this.$message.error("请至少选择一个商品进行结算!");
+        return;
+      }
+
+      //通过编程式导航触发路由
+      this.$router.push({ path: `/order/${tempArray.join(",")}` });
+    },
+    //继续购物
+    continueBuy() {
+      //通过编程式导航触发路由
+      this.$router.push({ path: "/goodslist" });
+    }
+  }
+};
 </script>
